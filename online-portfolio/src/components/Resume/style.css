@@ -1,0 +1,22 @@
+header .navbar {
+    margin: 0;
+    padding: 0;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.2s ease-in-out;
+}
+
+header .navbar * {
+    margin: 5px;
+    opacity: 0 !important;
+    transition: opacity 0.5s ease-in-out;
+}
+
+header:hover  .navbar {
+    height: 50px ;
+}
+
+header:hover  .navbar * {
+    display: inline;
+    opacity: 1 !important;
+}

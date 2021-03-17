@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+* {
+    font-family: 'Source Code Pro', monospace;
+}
+
+@keyframes rise {
+    from {top: 10vh;}
+    to {top: 100vh;}
+}
+
+html {
+    font-size: calc(45% + 1vw) !important;
+    scroll-behavior: smooth;
+}
+
+.text-dark{
+color: black !important;
+}
+
+section {
+    position: relative;
+}
+
+.frame {
+    position: relative;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    width: 80%;
+    height: auto !important;
+    margin-bottom: 0 auto;
+    padding-bottom: 2vmin !important;
+    border: 3px solid lightgrey;
+    padding: 3%;
+    border-bottom: none;
+    border-radius: 1rem 1rem 0 0;
+    background-color: black;
+    box-shadow: 0 0 30px grey;
+}
+
+.frame:after {
+  display: block;
+  position: relative;
+  top: calc(0.7vmax + 2vmin) !important;
+  z-index: 100 !important;
+  content: "";
+  width: 25%;
+  height: 0.7vmax;
+  background-image: linear-gradient(90deg,#585858 0%, #707070 5%, #c0c0c0 10%, #c0c0c0 90%, #707070 95%, #585858 100%);
+  transform: perspective(10px) rotateX(-1deg);
+  border-radius: 0 0 0.5rem 0.5rem;
+  margin: 0 auto;
+}
+
+.frame img {
+    width: 100% !important;
+    margin: auto;
+    height: auto !important;
+    position: relative;
+}
+
+.cover {
+    display: block;
+    position: relative;
+    height: 2vmin;
+    width: 100%;
+    background-color: lightGrey;
+    border-radius: 2px;
+    background-image: linear-gradient(90deg,grey 0, white 2%, lightGrey 5%, grey 10%, lightGrey 50%, grey 90%, lightGrey 95%, white 98%, grey 100%);
+    margin-bottom: 50px;
+}
+
+.cover:after {
+  content: "";
+  display: block;
+  position: relative;
+  top: 2vmin;
+  left: 1%;
+  box-shadow: 0 10px 30px;
+  width:98%;
+  height: 20px;
+  background-image: linear-gradient(0deg,#585858 0%, #707070 25%, #c0c0c0 100%);
+  transform: perspective(10px) rotateX(-1deg);
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.sun_moon svg{
+    position: fixed;
+    left: calc(50% - 50vw);
+    fill: transparent;
+    stroke: "none";
+    animation: rise 2s ease 0s 1 reverse forwards;
+    height: 100vw;
+    width: 100vw;
+    /* mix-blend-mode: saturation; */
+    /* z-index: -1; */
+}
+
+.sun_moon > svg > circle {
+    fill: transparent;
+}
+
+#about_me > .water  {
+    position: absolute;
+    top: -10vh;
+    margin: auto 0;
+    background-image: linear-gradient(lightBlue 0%, lightblue 30%, skyBlue 30%, skyBlue 75%, #42a7d6 75%, #42a7d6 100%);
+    width: 100%;
+    height: calc(100% + 10vh);
+    /* mix-blend-mode: normal; */
+}
+
+/* body :not(#portfolio) {
+    
+    z-index: 2000000000;
+} */
+
+/* #portfolio *, nav * {
+    z-index: 1;
+} */
+
+#home, #about_me {
+    z-index: 3;
+}
+
+/* #about_me :is(div){
+    z-index: 4;
+} */
+
+#portfolio {
+    background: #ffffffcc;
+}
+
+#portfolio .deep {
+    position: absolute;
+    margin: auto 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(skyBlue 0%, skyBlue 85%, lightBlue 85%, lightBlue 100%);
+    mix-blend-mode: hard-light;
+}
+
+#about_me {
+    background-color: #ffffff88;
+    mix-blend-mode: hard-light;
+}
+
+/* #about_me * {
+    background-color: white;
+    color: black
+} */
+
+body {
+    background-size: auto 100vmax;
+    background-repeat: repeat;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 0;
+}
+
+main {
+    overflow-x: hidden;
+    scroll-snap-type: mandatory !important;
+    scroll-snap-points-y: repeat(100vh) !important;
+}
+
+main .container-fluid {
+    scroll-snap-align: start !important;
+} 
+
+nav, footer span {
+    /* this simulates a border around the nav text */
+    text-shadow: -1px -1px 0 white,  
+        1px -1px 0 white,
+        -1px  1px 0 white,
+        1px  1px 0 white;
+    background-color: transparent;
+} 
+
+#navbarNav > ul > li {
+    position: relative !important;
+    background-color: white;
+    border-radius: 50% 50% 0 0;
+    box-shadow: 0 0 15px white;
+    width: auto !important;
+    float: right;
+}
+
+nav * {
+    background-color: transparent;
+}
+
+.sub-nav-content {
+  display: none;
+  position: absolute;
+  right: 1rem;
+  width: auto;
+  z-index: 1;
+  background-color: #ffffffdd;
+  box-shadow: 0 0 15px white;
+  justify-content: flex-end;
+  flex: row;
+}
+
+.sub-nav {
+  float: right;
+  overflow: hidden;
+}
+
+.sub-nav {
+    background-color: white;
+    border-radius: 50% 50% 0 0;
+    box-shadow: 0 0 15px white;
+}
+
+ul.sub-nav > li {
+  /* position:  !important; */
+  left: 10px !important;
+  display: inline;
+}
+
+.sub-nav:hover .sub-nav-content {
+  display: flex;
+}
+
+button.navbar-toggler {
+    background-color: white;
+}
+
+.jumbotron, .list-group, .list-group *, .card *{
+    background-color: transparent;
+}
+
+.card {
+    background-size: contain;
+    color: #222 !important;
+}
+
+input, textarea {
+    border: 1px solid #007bff33 !important;
+    border-radius: 0 !important;
+}
+
+input:focus, textarea:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(248,249,250,.5) !important;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.project-list a {
+    font-size: 1.5rem !important;
+}
+
+/* .project-list > h3:first-child::before {
+    content: "  \2666  ";
+    color: #007bff !important;
+    opacity: 0.3;
+} */
+
+.project-list > h3::before {
+    content: "  \2666  ";
+    color: #007bff !important;
+    opacity: 0.3;
+}
+
+.project-list > h3:last-child::after {
+    content: "  \2666  ";
+    color: #007bff !important;
+    opacity: 0.3;
+}
+
+
+p a {
+    margin: 0;
+    border: none;
+
+}
+
+p a, .call a {
+    transition: all 0.2s linear;
+    /* border-bottom: 3px solid;
+    border-color: transparent; */
+    text-decoration: none !important;
+    line-height: 100%;
+    /* text-shadow: 0 0 3px #007bff66; */
+}
+
+p a:hover, .call a:hover {
+    text-shadow: 0 0 5px white, 0 0 15px white, 0 0 20px white;
+    color: #0056b3;
+    /* border-bottom: 3px solid;
+    border-color: #0056b3; */
+}
+
+
+.call{
+    font-size: 1.5rem;
+}
+
+.call button {
+    font-weight: 600;
+    border: none;
+    padding: 0.5rem;
+    line-height: 1;
+    text-align: center;
+    min-width: 65px !important;
+    color: #007bff;
+}
+
+.call button:focus, .call button:hover {
+    text-decoration: underline;
+    color: #0056b3;
+
+}
+
+.call button:focus {
+    outline: 0;
+}
+
+footer {
+    background-color: transparent;
+}
+
+/* added the below media queries so that the sun/moon image stops at the middle on smaller devices*/
+
+/* extra-small */
+@media (min-width: 0px) and (max-width: 575px) {
+
+    @keyframes rise-mobile {
+    from {top: calc(50vh - 50vw);}
+    to {top: 100vh;}
+    }
+
+    .sun_moon svg{
+    animation: rise-mobile 2s ease 0s 1 reverse forwards;
+    }
+
+    #navbarNav > ul > li {
+    background: none;
+    box-shadow: none;
+    height: auto;
+    }
+
+}
+
+/* small */
+@media (min-width: 576px) {
+
+    section, article {
+        min-height: 100vh !important;
+    }
+
+  /* .navbar-collapse > ul > li {
+    background: none;
+    box-shadow: none;
+  } */
+}
