@@ -1,0 +1,41 @@
+{
+    "projects" : [
+        {
+            "title": "novelty",
+            "image": "/assets/images/NOVELty.png",
+            "url": "https://novelty.herokuapp.com/",
+            "summary": "Working with a team, we created ___. It allows you to add books that you have read or have finished reading, then recommends books to you based on your input."
+        },
+        {
+            "title": "eat da burger",
+            "image": "/assets/images/eat-da-burger.png",
+            "url": "https://tasha876-burger.herokuapp.com/",
+            "summary": "I created a burger logger called ___. It allows you to add, eat, and delete (virtual!) burgers! It also saves your current burgers and loads them for the next time."
+        },
+        {
+            "title": "password generator",
+            "image": "/assets/images/password-generator.png",
+            "url": "https://tasha876.github.io/Password-Generator/",
+            "summary": "I created a simple ___ It generates strong passwords using Javascript."
+        },
+        {
+            "title": "servicely",
+            "image": "/assets/images/Servicely.png",
+            "url": "https://tasha876.github.io/Servicely",
+            "summary": "Working with a team, we created ___ — an app that helps you either find help when your in need or help if you're feeling generous."
+        },
+        {
+            "title": "budget tracker",
+            "image": "/assets/images/budget-tracker.png",
+            "url": "https://hidden-lowlands-97124.herokuapp.com/",
+            "summary": "I developed the back-end and some of the front-end for a ___ that works online as well as offline."
+        },
+        {
+            "title": "workout tracker",
+            "image": "/assets/images/workout-tracker.png",
+            "url": "https://workout-tracker12345.herokuapp.com/",
+            "summary": "I produced the back-end code so that users can track their workouts with this ___."
+        }
+        
+    ]
+}

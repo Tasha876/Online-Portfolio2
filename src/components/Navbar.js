@@ -1,4 +1,5 @@
 import React from "react"
+// import { NavLink } from "react-router-dom";
 
 const Navbar = (props) => {
     return (
@@ -18,29 +19,17 @@ const Navbar = (props) => {
                           <li className="nav-item sub-nav">
                           <a className="nav-link" href="#portfolio">Projects <i className="fa fa-caret-down"></i></a>
                             <ul className="nav navbar-nav sub-nav-content">
+                                {
+                                props.titles.map(title => (
                                 <li className="nav-item">
-                                  <a className="nav-link" href="#novelty">NOVELty</a> 
-                                </li>
-                                <li className="nav-item">
-                                  <a className="nav-link" href="#eat-da-burger">Eat da Burger</a>
+                                  <a className="nav-link" href={"#"+title.replaceAll(" ","-")}>{title.toTitleCase()}</a> 
                                 </li> 
-                                <li className="nav-item">
-                                  <a className="nav-link" href="#servicely">Servicely</a>
-                                </li> 
-                                <li className="nav-item">
-                                  <a className="nav-link" href="#pass-gen">Password Generator</a>
-                                </li> 
-                                <li className="nav-item">
-                                  <a className="nav-link" href="#employee-summary">Employee Summary</a>
-                                </li>  
+                                ))}
                             </ul>
                           </li> 
                         </div>
                     <li className="nav-item">
-                        <a className="nav-link" href="resume">Resum&eacute;</a>
-                    </li>
-                    <li className="nav-item">
-                        <a className="nav-link" href="#contact">Contact</a>
+                        <a className="nav-link" href="#resume">Resum&eacute;</a>
                     </li>
                 </ul>
             </div>

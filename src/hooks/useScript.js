@@ -9,7 +9,6 @@ const useScript = url => {
 
     document.body.appendChild(script);
 
-
     // otherwise script is added at each reload
     return () => {
       document.body.removeChild(script);

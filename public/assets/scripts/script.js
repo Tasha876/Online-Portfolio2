@@ -1,7 +1,7 @@
 moment().format();
 
 // setting loaded variable to false, so that I can update it later, so sun only rises one time
-let loaded = false;
+let loaded = true;
 
 const main = document.querySelector("main");
 const sunDiv = document.createElement("div");

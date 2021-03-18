@@ -4,7 +4,7 @@ import Summary from "./Summary";
 const Project = (props) => {
     console.log(props)
     return (
-        <article id="servicely" className="container-fluid d-flex align-items-center flex-column min-vh-100 mx-0">
+        <article id={props.title.replaceAll(" ","-")} className="container-fluid d-flex align-items-center flex-column min-vh-100 mx-0">
             <div className="row w-100 my-auto"> 
                 <div className="col-md-12">
                     <div className="jumbotron py-3 m-0">
@@ -16,11 +16,22 @@ const Project = (props) => {
                               </div>
                               <div className="cover mx-auto"></div>
                             </div>
-                            {props.description()}
-                            {/* <Summary 
-                                url={props.url}
+                            <Summary 
+                                title={props.title}
                                 description={props.description}
-                            /> */}
+                                summary={props.summary}
+                                link={props.link}
+                                url={props.url}
+                                call={
+                                    function () {
+                                        return (
+                                            <div className="text-center">
+                                                {props.link("Check it out here")}
+                                            </div>
+                                        )}
+                                    }
+                                
+                            />
                         </div>
                     </div>
                 </div>
