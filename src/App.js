@@ -24,7 +24,7 @@ const App = () => {
         <Route exact path="/resume">
           <Resume/>
         </Route>
-        <Route exact path="/">
+        <Route path="/">
           <Main 
             projects={projects}
             titles={titles}
