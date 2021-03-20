@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/Online-Portfolio-React/static/css/main.31034450.chunk.css",
-    "main.js": "/Online-Portfolio-React/static/js/main.5c0ec491.chunk.js",
-    "main.js.map": "/Online-Portfolio-React/static/js/main.5c0ec491.chunk.js.map",
-    "runtime-main.js": "/Online-Portfolio-React/static/js/runtime-main.1a1e65db.js",
-    "runtime-main.js.map": "/Online-Portfolio-React/static/js/runtime-main.1a1e65db.js.map",
-    "static/css/2.cbedd6f4.chunk.css": "/Online-Portfolio-React/static/css/2.cbedd6f4.chunk.css",
-    "static/js/2.8716c44f.chunk.js": "/Online-Portfolio-React/static/js/2.8716c44f.chunk.js",
-    "static/js/2.8716c44f.chunk.js.map": "/Online-Portfolio-React/static/js/2.8716c44f.chunk.js.map",
-    "index.html": "/Online-Portfolio-React/index.html",
-    "static/css/2.cbedd6f4.chunk.css.map": "/Online-Portfolio-React/static/css/2.cbedd6f4.chunk.css.map",
-    "static/css/main.31034450.chunk.css.map": "/Online-Portfolio-React/static/css/main.31034450.chunk.css.map",
-    "static/js/2.8716c44f.chunk.js.LICENSE.txt": "/Online-Portfolio-React/static/js/2.8716c44f.chunk.js.LICENSE.txt"
+    "main.css": "/Online-Portfolio2/static/css/main.31034450.chunk.css",
+    "main.js": "/Online-Portfolio2/static/js/main.ebfa38b6.chunk.js",
+    "main.js.map": "/Online-Portfolio2/static/js/main.ebfa38b6.chunk.js.map",
+    "runtime-main.js": "/Online-Portfolio2/static/js/runtime-main.b56d314e.js",
+    "runtime-main.js.map": "/Online-Portfolio2/static/js/runtime-main.b56d314e.js.map",
+    "static/css/2.cbedd6f4.chunk.css": "/Online-Portfolio2/static/css/2.cbedd6f4.chunk.css",
+    "static/js/2.8716c44f.chunk.js": "/Online-Portfolio2/static/js/2.8716c44f.chunk.js",
+    "static/js/2.8716c44f.chunk.js.map": "/Online-Portfolio2/static/js/2.8716c44f.chunk.js.map",
+    "index.html": "/Online-Portfolio2/index.html",
+    "static/css/2.cbedd6f4.chunk.css.map": "/Online-Portfolio2/static/css/2.cbedd6f4.chunk.css.map",
+    "static/css/main.31034450.chunk.css.map": "/Online-Portfolio2/static/css/main.31034450.chunk.css.map",
+    "static/js/2.8716c44f.chunk.js.LICENSE.txt": "/Online-Portfolio2/static/js/2.8716c44f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.1a1e65db.js",
+    "static/js/runtime-main.b56d314e.js",
     "static/css/2.cbedd6f4.chunk.css",
     "static/js/2.8716c44f.chunk.js",
     "static/css/main.31034450.chunk.css",
-    "static/js/main.5c0ec491.chunk.js"
+    "static/js/main.ebfa38b6.chunk.js"
   ]
 }
