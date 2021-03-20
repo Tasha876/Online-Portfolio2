@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Main from "./components/Main";
-import Resume from "./components/Resume/Resume";
+import Resume from "./Resume/Resume";
 import projects from "./componentFiles/projectList";
 
 String.prototype.toTitleCase = function() {
@@ -18,13 +18,13 @@ String.prototype.toTitleCase = function() {
 const titles = projects.map(project => project.title)
 
 const App = () => {
-  document.title = "Online Portfolio";
+  document.title = "Natasha Fray | Online Portfolio";
   return (
     <Router>
         <Route exact path="/resume">
           <Resume/>
         </Route>
-        <Route path="/">
+        <Route exact path="/">
           <Main 
             projects={projects}
             titles={titles}

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 
-* {
-    font-family: 'Source Code Pro', monospace !important;
+#root {
+    font-family: 'Source Code Pro', monospace;
 }
 
 @keyframes rise {
@@ -12,10 +12,6 @@
 html {
     font-size: calc(45% + 1vw) !important;
     scroll-behavior: smooth;
-}
-
-.text-dark{
-color: black !important;
 }
 
 section {
@@ -173,10 +169,11 @@ nav, footer span {
 
 nav * {
     background-color: transparent;
+    width: auto;
 }
 
 .sub-nav-content {
-  display: none;
+  display: none !important;
   position: absolute;
   right: 1rem;
   width: auto;
@@ -190,12 +187,14 @@ nav * {
 .sub-nav {
   float: right;
   overflow: hidden;
+  width: auto;
 }
 
 .sub-nav {
     background-color: white;
     border-radius: 50% 50% 0 0;
     box-shadow: 0 0 15px white;
+    min-width: 0;
 }
 
 ul.sub-nav > li {
@@ -204,7 +203,7 @@ ul.sub-nav > li {
 }
 
 .sub-nav:hover .sub-nav-content {
-  display: flex;
+  display: flex !important;
 }
 
 button.navbar-toggler {
@@ -212,7 +211,7 @@ button.navbar-toggler {
 }
 
 .jumbotron, .list-group, .list-group *, .card *{
-    background-color: transparent;
+    background-color: transparent !important;
 }
 
 .card {
@@ -314,12 +313,11 @@ footer {
     #navbarNav > ul > li {
     background: none;
     box-shadow: none;
-    height: auto;
     }
 
 }
 
-/* small */
+/* small+ */
 @media (min-width: 576px) {
 
     section, article {

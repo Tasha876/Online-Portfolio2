@@ -1,0 +1,51 @@
+#root {
+    position: relative;
+    top: 50px;
+}
+
+section, article {
+    min-height: auto !important;
+}
+
+section ul > li {
+    list-style-type: square;
+    list-style-position: inside;
+}
+
+#root > .navbar {
+    margin: 0;
+    overflow: hidden;
+    transition: height 0.2s ease-in-out;
+    display: block;
+    height: 10px;
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    padding: 5px;
+    z-index: 2;
+}
+
+#root > .navbar:hover {
+    height: 50px;
+    display: inline;
+}
+
+
+#root > .navbar > ul {
+    opacity: 0 !important;
+    transition: opacity .75s ease-in-out;
+    display: flex;
+    justify-content: space-around;
+}
+
+#root > .navbar:hover > ul {
+    opacity: 1 !important;
+}
+
+.navbar > ul > li {
+    display: inline;
+}
+
+li {
+    line-height: 2rem !important;
+}

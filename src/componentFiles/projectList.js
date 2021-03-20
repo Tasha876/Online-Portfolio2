@@ -8,13 +8,14 @@ class Project {
     this.image = image
     this.url = url
     this.summary = summary
+
     this.link = function (linkText) {
       return (
-        <a className="sm-text-decoration-none" href={this.url} target="_blank" rel="noreferrer">{linkText}</a>
+        <a key={this.title} className="sm-text-decoration-none" href={this.url} target="_blank" rel="noreferrer">{linkText}</a>
       )
     }
     this.description = function () {
-      return <p> {this.summary.replaceJSX("___", this.link(this.title.toTitleCase()))}</p>
+      return <p key={this.title}> {this.summary.replaceJSX("___", this.link(this.title.toTitleCase()))}</p>
     }
   }
 }

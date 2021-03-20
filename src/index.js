@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-// import './index.css';
 import 'reset-css'
+import 'jquery/dist/jquery.min.js'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './style.css'
+import './components/text-dark.css'
+import 'bootstrap/dist/js/bootstrap.min.js'
 
 ReactDOM.render(<App />, document.getElementById('root'));

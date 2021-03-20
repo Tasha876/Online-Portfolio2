@@ -1,13 +1,19 @@
 import React from "react"
-import "./Resume.module.css"
+// import 'reset-css';
+import "./style.css"
+
+const style = {
+    main: {
+        fontFamily: "Trebuchet MS, Lucida Sans Unicode, 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"
+    }
+};
 
 const Resume = () => {
     return (
-        <main class="container h-100">
-        <header>
-            <nav class="navbar nav bg-light text-light">
-                <ul class="mx-auto">
-                    <li class="lead"><a href="NFray_Resume.pdf" targer="_blank" rel="noreferrer" download="">Download PDF</a></li>
+        <>
+        <nav className="navbar nav bg-light text-light">
+                <ul className="mx-auto">
+                    <li className="lead"><a href="NFray_Resume.pdf" targer="_blank" rel="noreferrer" download="">Download PDF</a></li>
                     <li><a href="#profile">Profile</a></li>
                     <li><a href="#tech">Technical Skills</a></li>
                     <li><a href="#education">Education</a></li>
@@ -16,17 +22,19 @@ const Resume = () => {
                     <li><a href="#accomplishments">Selected Accomplishments</a></li>
                 </ul>
             </nav>
-            <h1 class="display-3 text-center">Natasha Fray</h1>
-        <p class="text-center">130 Fakestreet St W, Unit 321 Waterloo ON, N2A 1A1<br></br>
+        <main className="container h-100" style={style.main}>
+        <header>
+            <h1 className="display-3 text-center">Natasha Fray</h1>
+        <p className="text-center">130 Fakestreet St W, Unit 321 Waterloo ON, N2A 1A1<br></br>
         519-555-5555 | natasha.fray9@gmail.com<br></br>
         <a href="https://www.linkedin.com/in/natasha-fray-926ba61b6/" target="_blank" rel="noreferrer">LinkedIn</a> | <a href="https://github.com/Tasha876" target="_blank" rel="noreferrer">GitHub </a> | <a href="https://tasha876.github.io/Online-Portfolio/" target="_blank" rel="noreferrer">Portfolio</a></p>
 
         </header>
-        <h2 id="profile" class="display-4" >PROFILE:</h2>
+        <h2 id="profile" className="display-4" >PROFILE:</h2>
         <hr></hr>
         <p>Fullstack web developer with Bachelor of Mathematics and Fullstack Developer Certificate, having over 10 years’ experience working in customer focused environments. Adept at using creativity and technical skill to solve problems in many capacities.</p>
 
-        <h2 id="tech" class="display-4">TECHNICAL SKILLS:</h2>
+        <h2 id="tech" className="display-4">TECHNICAL SKILLS:</h2>
 
         <hr></hr>
 
@@ -35,25 +43,25 @@ const Resume = () => {
         <p><strong>APPLICATIONS: </strong>Bootstrap, jQuery, Node.js, Express.js, React.js</p>
         </section>
 
-        <h2 id="education" class="display-4">EDUCATION:</h2>
+        <h2 id="education" className="display-4">EDUCATION:</h2>
         <hr></hr>
         <section>
             <article>
                 <strong>Coding Bootcamp (in process)</strong>
-                <p class="float-right">September 2020 – April 2021</p>
+                <p className="float-right">September 2020 – April 2021</p>
                 <p>A focused 24-week program focused on gaining relevant technical programming skills.</p>
             </article>
 
 
             <article>
                 <strong>Bachelor of Math</strong>
-                <p class="float-right">	2015 – 2020</p>
+                <p className="float-right">	2015 – 2020</p>
                 <p>University of Waterloo, Waterloo, ON</p>
             </article>
 
         </section>
 
-        <h2 id="projects" class="display-4">PROJECTS:</h2>
+        <h2 id="projects" className="display-4">PROJECTS:</h2>
         <hr></hr>
         <section>
             <article>
@@ -81,14 +89,14 @@ const Resume = () => {
             </article>
         </section>
 
-        <h2 id="experience" class="display-4">EXPERIENCE:</h2>
+        <h2 id="experience" className="display-4">EXPERIENCE:</h2>
 
         <hr></hr>
 
         <section>
             <article>
                 <strong>Data Entry Clerk</strong>
-                    <p class="float-right">2014 – present</p>
+                    <p className="float-right">2014 – present</p>
                     <p>Nordia, Waterloo, ON</p>
                     <ul>
                         <li>Provide service to customers remotely. </li>
@@ -102,7 +110,7 @@ const Resume = () => {
 
         </section>
 
-        <h2 id="accomplishments" class="display-4">SELECTED ACCOMPLISHMENTS:</h2>
+        <h2 id="accomplishments" className="display-4">SELECTED ACCOMPLISHMENTS:</h2>
 
         <hr></hr>
 
@@ -116,6 +124,7 @@ const Resume = () => {
             </article>
         </section>
         </main>
+        </>
     )
 }
 

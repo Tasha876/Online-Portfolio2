@@ -8,6 +8,7 @@ import Footer from "./Footer";
 import projects from "../componentFiles/projectList";
 import useScript from "../hooks/useScript";
 import ResumeCall from "./ResumeCall";
+import './style.css'
 
 const titles = projects.map(project => project.title)
 
@@ -22,10 +23,10 @@ const Main = (props) => {
             <Splash />
             <AboutMe />
             <main>
-                <section id="portfolio" class="container-fluid d-flex align-items-center flex-column px-0">
-                    <div class="deep"></div>
-                    <div class="row w-100 my-auto"> 
-                        <div class="col-md-12">
+                <section id="portfolio" className="container-fluid d-flex align-items-center flex-column px-0">
+                    <div className="deep"></div>
+                    <div className="row w-100 my-auto"> 
+                        <div className="col-md-12">
                             <ProjectIntro 
                                 titles={props.titles}
                             />
@@ -33,6 +34,7 @@ const Main = (props) => {
                                 projects.map(project => (
 
                             <Project
+                                key={project.title}
                                 title={project.title}
                                 link={project.link}
                                 image={project.image}

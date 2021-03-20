@@ -1,5 +1,4 @@
 import React from "react"
-// import { NavLink } from "react-router-dom";
 
 const Navbar = (props) => {
     return (
@@ -21,7 +20,7 @@ const Navbar = (props) => {
                             <ul className="nav navbar-nav sub-nav-content">
                                 {
                                 props.titles.map(title => (
-                                <li className="nav-item">
+                                <li key={title} className="nav-item">
                                   <a className="nav-link" href={"#"+title.replaceAll(" ","-")}>{title.toTitleCase()}</a> 
                                 </li> 
                                 ))}
