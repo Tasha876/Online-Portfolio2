@@ -1,5 +1,4 @@
 import React from "react"
-// import 'reset-css';
 import "./style.css"
 
 const style = {
