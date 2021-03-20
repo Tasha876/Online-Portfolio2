@@ -13,7 +13,7 @@ import './style.css'
 const titles = projects.map(project => project.title)
 
 const Main = (props) => {
-    useScript("/assets/scripts/script.js");
+    useScript(process.env.PUBLIC_URL + "/assets/scripts/script.js");
     const projects = props.projects
     return (
         <div>

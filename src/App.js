@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+// import { BrowserRouter as Router, Route } from "react-router-dom";
 import Main from "./components/Main";
 import Resume from "./Resume/Resume";
 import projects from "./componentFiles/projectList";
@@ -20,17 +20,21 @@ const titles = projects.map(project => project.title)
 const App = () => {
   document.title = "Natasha Fray | Online Portfolio";
   return (
-    <Router>
-        <Route exact path="/resume">
-          <Resume/>
-        </Route>
-        <Route exact path="/">
-          <Main 
-            projects={projects}
-            titles={titles}
-          />
-        </Route>
-    </Router>
+    <Main 
+    projects={projects}
+    titles={titles}
+  />
+    // <Router>
+    //     <Route exact path="/resume">
+    //       <Resume/>
+    //     </Route>
+    //     <Route exact path="/">
+    //       <Main 
+    //         projects={projects}
+    //         titles={titles}
+    //       />
+    //     </Route>
+    // </Router>
   );
 }
 

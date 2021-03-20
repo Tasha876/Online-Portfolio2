@@ -19,6 +19,7 @@ sunDiv.appendChild(svg);
 
 const homeScreen = document.querySelector("#home");
 
+
 let url = "https://api.sunrise-sunset.org/json?lat=43.4643&lng=-80.5204&formatted=0&date=";
 let date = moment().format('YYYY-MM-DD');
 url += date;
