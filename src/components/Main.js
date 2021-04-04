@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect, useReducer } from "react"
 import Project from "./Project"
 import Navbar from "./Navbar";
 import ProjectIntro from "./ProjectIntro"
@@ -9,12 +9,47 @@ import projects from "../componentFiles/projectList";
 import useScript from "../hooks/useScript";
 import ResumeCall from "./ResumeCall";
 import './style.css'
+import $ from "jquery"
+
 
 const titles = projects.map(project => project.title)
 
 const Main = (props) => {
     useScript(process.env.PUBLIC_URL + "/assets/scripts/script.js");
+
     const projects = props.projects
+
+    const init = (start) => {
+        return {
+            index: start,
+            motion: ""
+        }
+    }
+
+    const reducer = (state, action) => {
+        switch(action.type) {
+            case "forward": {
+                console.log(state)
+                return {
+                    motion: "forward", 
+                    index: state.index + 1 < projects.length ? state.index + 1 : 0
+                }
+                
+            }
+            case "back": {
+                console.log(state)
+                return {
+                    motion: "back",
+                    index: state.index > 0 ? state.index - 1 : projects.length - 1
+                }
+            }
+        }
+    }
+
+    const [state, setProjectIndex] = useReducer(reducer, 0, init)
+
+    let project = projects[state.index]
+
     return (
         <div>
             <Navbar
@@ -30,10 +65,11 @@ const Main = (props) => {
                             <ProjectIntro 
                                 titles={props.titles}
                             />
-                            {
-                                projects.map(project => (
-
                             <Project
+                                motion={state.motion}
+                                n={projects.length}
+                                setProjectIndex={setProjectIndex}
+                                index={state.index}
                                 key={project.title}
                                 title={project.title}
                                 link={project.link}
@@ -42,8 +78,6 @@ const Main = (props) => {
                                 summary={project.summary}
                                 url={project.url}
                             />
-                            ))
-                            }
                     </div>
                     </div>
                 </section>

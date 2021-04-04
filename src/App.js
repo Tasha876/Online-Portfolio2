@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Main from "./components/Main";
 import Resume from "./Resume/Resume";
 import projects from "./componentFiles/projectList";
@@ -18,18 +18,21 @@ String.prototype.toTitleCase = function() {
 const titles = projects.map(project => project.title)
 
 const App = () => {
+  console.log(window.location.pathname)
   document.title = "Natasha Fray | Online Portfolio";
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router basename="/">
+      <Switch>
         <Route exact path="/resume">
           <Resume/>
         </Route>
-        <Route exact path="/">
+        <Route path="/">
           <Main 
             projects={projects}
             titles={titles}
           />
         </Route>
+      </Switch>
     </Router>
   );
 }

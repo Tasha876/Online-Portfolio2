@@ -9,6 +9,62 @@
     to {top: 100vh;}
 }
 
+@keyframes slide-in-right {
+    from {
+        overflow: hidden;
+        left: 100%;
+        opacity: 0;
+        transform-origin: 100%;
+    }
+    to {
+        overflow: hidden;
+        left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-left {
+    from {
+        overflow: hidden;
+        left: -100%;
+        opacity: 0;
+        transform-origin: -100%;
+    }
+    to {
+        overflow: hidden;
+        left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes slide-out-right {
+    from {
+        overflow: hidden;
+        left: 0;
+        opacity: 0;
+        transform-origin: 0;
+    }
+    to {
+        overflow: hidden;
+        left: -100%;
+        opacity: 1;
+    }
+}
+
+@keyframes slide-out-left {
+    from {
+        overflow: hidden;
+        left: 0;
+        opacity: 0;
+        transform-origin: 0;
+    }
+    to {
+        overflow: hidden;
+        left: 100%;
+        opacity: 1;
+    }
+}
+
 html {
     font-size: calc(45% + 1vw) !important;
     scroll-behavior: smooth;
@@ -115,6 +171,37 @@ section {
 #portfolio {
     background: #ffffffcc;
 }
+
+#portfolio article {
+    position: relative;
+}
+
+#portfolio article .back, #portfolio article .forward {
+    display: block;
+    height: 5em;
+    position: absolute;
+    top: 50%;
+}
+
+#portfolio article .back, #portfolio article .forward {
+    font-size: 3em;
+    font-weight: 900;
+    color: grey;
+}
+
+#portfolio article .back {
+    left: 15px;
+}
+
+#portfolio article .forward {
+    right: 15px;
+}
+
+#portfolio article .back:hover, #portfolio article .forward:hover {
+    color: #333;
+}
+
+
 
 #portfolio .deep {
     position: absolute;
@@ -238,14 +325,14 @@ p {
 }
 
 .project-list > h3::before {
-    content: "  \2666  ";
-    color: #007bff !important;
+    content: "    +";
+    color: #007bff;
     opacity: 0.3;
 }
 
-.project-list > h3:last-child::after {
-    content: "  \2666  ";
-    color: #007bff !important;
+.project-list > h3::after {
+    content: "+";
+    color: #007bff;
     opacity: 0.3;
 }
 
@@ -294,6 +381,54 @@ p a:hover, .call a:hover {
 
 footer {
     background-color: transparent;
+}
+
+.dots {
+    margin: auto;
+    width: 33.3333%;
+    left: 16.667;
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 3rem;
+}
+
+.project {
+    overflow-x: hidden;
+    position: relative;
+    display: block;
+    width: calc(100% - 80px) !important;
+    margin: auto;
+    padding: 0;
+    left: 40px;
+}
+
+.project > div {
+    position: relative;
+    width: 100%;
+    height: 100%
+}
+
+.slide-in-left {
+    animation: slide-in-left 3s ease-in 3s;
+    /* animation-delay: 3s; */
+}
+
+.slide-in-right {
+    animation: slide-in-right 3s ease-in 3s;
+    /* animation-delay: 3s; */
+}
+
+.slide-out-left {
+    animation: slide-out-left 3s;
+}
+
+.slide-out-right {
+    animation: slide-out-right 3s;
+}
+
+.test {
+    background-color: pink;
 }
 
 /* added the below media queries so that the sun/moon image stops at the middle on smaller devices*/

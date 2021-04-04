@@ -1,7 +1,7 @@
 import React from "react"
 
 const getRef = (title) => {
-    return `#${title.replace(" ", "-")}`
+    return `#${title.replaceAll(" ", "-")}`
 }
 
 const ProjectIntro = (props) => {

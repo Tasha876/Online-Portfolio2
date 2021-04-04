@@ -12,7 +12,7 @@ const Resume = () => {
         <>
         <nav className="navbar nav bg-light text-light">
                 <ul className="mx-auto">
-                    <li className="lead"><a href="NFray_Resume.pdf" targer="_blank" rel="noreferrer" download="">Download PDF</a></li>
+                    <li className="lead"><a href="NFray_Resume.pdf" targer="_blank" rel="noreferrer" download>Download PDF</a></li>
                     <li><a href="#profile">Profile</a></li>
                     <li><a href="#tech">Technical Skills</a></li>
                     <li><a href="#education">Education</a></li>
@@ -26,7 +26,7 @@ const Resume = () => {
             <h1 className="display-3 text-center">Natasha Fray</h1>
         <p className="text-center">130 Fakestreet St W, Unit 321 Waterloo ON, N2A 1A1<br></br>
         519-555-5555 | natasha.fray9@gmail.com<br></br>
-        <a href="https://www.linkedin.com/in/natasha-fray-926ba61b6/" target="_blank" rel="noreferrer">LinkedIn</a> | <a href="https://github.com/Tasha876" target="_blank" rel="noreferrer">GitHub </a> | <a href="https://tasha876.github.io/Online-Portfolio/" target="_blank" rel="noreferrer">Portfolio</a></p>
+        <a href="https://www.linkedin.com/in/natasha-fray-926ba61b6/" target="_blank" rel="noreferrer">LinkedIn</a> | <a href="https://github.com/Tasha876" target="_blank" rel="noreferrer">GitHub </a> | <a href="https://tasha876.github.io/Online-Portfolio2/" target="_blank" rel="noreferrer">Portfolio</a></p>
 
         </header>
         <h2 id="profile" className="display-4" >PROFILE:</h2>
