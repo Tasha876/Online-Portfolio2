@@ -11,57 +11,54 @@
 
 @keyframes slide-in-right {
     from {
-        overflow: hidden;
-        left: 100%;
+        /* overflow: hidden; */
+        left: 0;
         opacity: 0;
-        transform-origin: 100%;
     }
     to {
-        overflow: hidden;
-        left: 0;
+        /* display: block; */
+        /* color: pink; */
+        /* overflow: hidden; */
+        left: -100%;
         opacity: 1;
     }
 }
 
 @keyframes slide-in-left {
     from {
-        overflow: hidden;
-        left: -100%;
+        /* overflow: hidden; */
+        right: 100%;
         opacity: 0;
-        transform-origin: -100%;
     }
     to {
-        overflow: hidden;
-        left: 0;
+        /* overflow: hidden; */
+        right: 0;
         opacity: 1;
     }
 }
 
 @keyframes slide-out-right {
     from {
-        overflow: hidden;
+        /* overflow: hidden; */
         left: 0;
-        opacity: 0;
-        transform-origin: 0;
+        opacity: 1;
     }
     to {
-        overflow: hidden;
+        /* overflow: hidden; */
         left: -100%;
-        opacity: 1;
+        opacity: 0;
+        /* display: none; */
     }
 }
 
 @keyframes slide-out-left {
     from {
-        overflow: hidden;
-        left: 0;
-        opacity: 0;
-        transform-origin: 0;
+        right: 100%;
+        opacity: 1;
     }
     to {
-        overflow: hidden;
-        left: 100%;
-        opacity: 1;
+        right: 0;
+        opacity: 0;
     }
 }
 
@@ -180,7 +177,7 @@ section {
     display: block;
     height: 5em;
     position: absolute;
-    top: 50%;
+    top: calc(50% - 2.5em);
 }
 
 #portfolio article .back, #portfolio article .forward {
@@ -384,13 +381,12 @@ footer {
 }
 
 .dots {
-    margin: auto;
     width: 33.3333%;
     left: 16.667;
     display: flex;
     justify-content: space-evenly;
-    position: absolute;
-    bottom: 3rem;
+    position: relative;
+    bottom: 5vh;
 }
 
 .project {
@@ -403,33 +399,60 @@ footer {
     left: 40px;
 }
 
-.project > div {
+.project > div.animated > div {
     position: relative;
     width: 100%;
     height: 100%
 }
 
+.slide-out-left {
+    animation: slide-out-left 1s ease-in 0s 1 forwards;
+}
+
+.slide-out-right {
+    animation: slide-out-right 1s ease-in 0s 1 forwards;
+}
+
 .slide-in-left {
-    animation: slide-in-left 3s ease-in 3s;
+    animation: slide-in-left 1s ease-in 0s 1 forwards;
     /* animation-delay: 3s; */
 }
 
 .slide-in-right {
-    animation: slide-in-right 3s ease-in 3s;
+    animation: slide-in-right 1s ease-in 0s 1 forwards;
     /* animation-delay: 3s; */
-}
-
-.slide-out-left {
-    animation: slide-out-left 3s;
-}
-
-.slide-out-right {
-    animation: slide-out-right 3s;
 }
 
 .test {
     background-color: pink;
 }
+
+.test2 {
+    background-color: red !important;
+}
+
+ .animated {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    max-width: 100%;
+}
+
+.animated > div {
+    align-self: flex-start;
+    min-width: 100%;
+    /* flex-basis: 100%; */
+    /* flex-grow: 1; */
+}
+
+.disappear {
+    display: none;
+}
+
+/* .animated > div {
+    width: 100%;
+} */
 
 /* added the below media queries so that the sun/moon image stops at the middle on smaller devices*/
 
@@ -441,7 +464,7 @@ footer {
     to {top: 100vh;}
     }
 
-    .sun_moon svg{
+    .sun_moon svg {
     animation: rise-mobile 2s ease 0s 1 reverse forwards;
     }
 
@@ -457,5 +480,9 @@ footer {
 
     section, article {
         min-height: 100vh !important;
+    }
+    
+    article > div:first-child {
+        min-height: calc(90vh - 5rem) !important;
     }
 }

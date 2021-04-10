@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useReducer } from "react"
+import React, { useState, useEffect, useReducer, useRef } from "react"
 import Project from "./Project"
 import Navbar from "./Navbar";
 import ProjectIntro from "./ProjectIntro"
@@ -8,9 +8,8 @@ import Footer from "./Footer";
 import projects from "../componentFiles/projectList";
 import useScript from "../hooks/useScript";
 import ResumeCall from "./ResumeCall";
+import Animated from "../hooks/animate"
 import './style.css'
-import $ from "jquery"
-
 
 const titles = projects.map(project => project.title)
 
@@ -29,17 +28,15 @@ const Main = (props) => {
     const reducer = (state, action) => {
         switch(action.type) {
             case "forward": {
-                console.log(state)
                 return {
-                    motion: "forward", 
+                    motion: "right", 
                     index: state.index + 1 < projects.length ? state.index + 1 : 0
                 }
                 
             }
             case "back": {
-                console.log(state)
                 return {
-                    motion: "back",
+                    motion: "left",
                     index: state.index > 0 ? state.index - 1 : projects.length - 1
                 }
             }

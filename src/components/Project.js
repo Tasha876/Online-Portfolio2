@@ -1,5 +1,6 @@
 import React, { useEffect, useReducer, useState, useRef } from "react";
 import Summary from "./Summary";
+import Animated from "../hooks/animate"
 import $ from "jquery"
 
 const RepeatDots = (props) => {
@@ -13,39 +14,53 @@ const RepeatDots = (props) => {
 
 const Project = (props) => {
 
-    const prevProject = useRef($(".project > div"))
+    console.log(props.children)
 
-    const init = () => {
-        return {motion: ""}
-    }
+    // const project = useRef($(".project > div"))
 
-    const prev = useRef()
+    // const init = () => {
+    //     return {motion: ""}
+    // }
 
-    const reducer = (state, action) => {
-        console.log(props.motion)
-        prev.current = prevProject.current
-        console.log(prev.current, $(".project > div"))
-        switch(props.motion) {
-            case "forward": {
-                $(prev.current).removeClass("[class^=slide-]").addClass("slide-out-right")
-                $(".project > div").removeClass("[class^=slide-]").addClass("slide-in-right")
-                break
-            }
-            case "back": {
-                $(prev.current).removeClass("[class^=slide-]").addClass("slide-out-left")
-                $(".project > div").removeClass("[class^=slide-]").addClass("slide-in-left") 
-                break
-            }
-        }
-    }
+    // const prev = useRef()
+    
+    // const setProject = (newProject)=>{
+    //     project.current = newProject;
+    //     return setItems(newProject);
+    // }
 
-    const [animation, setAnimation] = useReducer(reducer,"", init)
+    // const prevItem = useRef()
 
-    useEffect(() => {
-        prev.current = prevProject.current
-        // debugger;
-        setAnimation({animation: props.motion})
-    })
+    // function transitionEnd(){
+    //     // update the animatedItems to remove the first item
+    //     setProject(itemRef.current.slice(1));
+    // }
+
+    // const reducer = (state, action) => {
+    //     console.log(props.motion)
+    //     prev.current = prevProject.current
+    //     console.log(prev.current, $(".project > div"))
+    //     switch(props.motion) {
+    //         case "forward": {
+    //             // $(prev.current).removeClass("[class^=slide-]").addClass("slide-out-right")
+    //             $(".project > div").removeClass("[class^=slide-]").addClass("slide-in-right")
+    //             break
+    //         }
+    //         case "back": {
+    //             // $(prev.current).removeClass("[class^=slide-]").addClass("slide-out-left")
+    //             $(".project > div").removeClass("[class^=slide-]").addClass("slide-in-left") 
+    //             break
+    //         }
+    //     }
+    // }
+
+    // const [animation, setAnimation] = useReducer(reducer,"", init)
+
+    // useEffect(() => {
+    //     prev.current = prevProject.current
+    //     // $(prev.current).removeClass("[class^=slide-]").addClass("slide-out-right")
+    //     setAnimation({animation: props.motion})
+    // })
 
 
     return (
@@ -54,6 +69,9 @@ const Project = (props) => {
                 <div className="col-md-12">
                 <i onClick={()=>{ props.setProjectIndex({type:"back"})}} className="fas fa-chevron-left back"></i>
                 <div class="project jumbotron p-0 m-0">
+                <Animated
+                    motion={props.motion}
+                >
                     <div>
                         <h2 className="display-3 display-md-4 text-dark text-center">{props.title}.</h2>
                         <div className="row">
@@ -81,11 +99,12 @@ const Project = (props) => {
                             />
                         </div>
                     </div>
-                </div>
+                </Animated>
                 </div>
                 <i onClick={()=>props.setProjectIndex({type:"forward"})} className="fas fa-chevron-right forward"></i>
                 </div>
-            <div className="dots text-center"><RepeatDots n={props.n} i={props.index}/></div>
+                </div>
+                <div className="dots text-center"><RepeatDots n={props.n} i={props.index}/></div>
         </article>
     )
 }
