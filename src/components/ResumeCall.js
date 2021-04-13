@@ -9,7 +9,7 @@ const ResumeCall = () => {
                     <div className="col-md-12">
                         <div className="jumbotron call pb-2 m-0 text-center">
                             <h1 className="display-3 text-dark text-center">Want to know more?</h1>
-                            <h2><a href="#" onClick={() => window.open("/resume")} target="_blank">Please see my resum&eacute;.</a></h2>
+                            <h2><a href={null} onClick={() => window.open("/resume")} target="_blank">Please see my resum&eacute;.</a></h2>
                         </div>
                     </div>
                 </div>

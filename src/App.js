@@ -21,7 +21,7 @@ const App = () => {
   console.log(window.location.pathname)
   document.title = "Natasha Fray | Online Portfolio";
   return (
-    <Router basename="/">
+    <Router basename={process.env.PUBLIC_URL}>
       <Switch>
         <Route exact path="/resume">
           <Resume/>
