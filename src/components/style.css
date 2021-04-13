@@ -11,47 +11,41 @@
 
 @keyframes slide-in-right {
     from {
-        /* overflow: hidden; */
-        left: 0;
         opacity: 0;
+        transform: translateX(100%);
+        transform-origin: 100%;
     }
     to {
-        /* display: block; */
-        /* color: pink; */
-        /* overflow: hidden; */
-        left: -100%;
         opacity: 1;
+        transform: translateX(0);
     }
 }
 
-@keyframes slide-in-left {
+/* @keyframes slide-in-left {
     from {
-        /* overflow: hidden; */
-        right: 100%;
+        left: 100%;
         opacity: 0;
     }
     to {
-        /* overflow: hidden; */
-        right: 0;
+        left: 0;
         opacity: 1;
     }
-}
+} */
 
 @keyframes slide-out-right {
     from {
-        /* overflow: hidden; */
-        left: 0;
         opacity: 1;
+        transform: translateX(-100%);
+        transform-origin: 0;
+
     }
     to {
-        /* overflow: hidden; */
-        left: -100%;
         opacity: 0;
-        /* display: none; */
+        transform: translateX(-200%);
     }
 }
 
-@keyframes slide-out-left {
+/* @keyframes slide-out-left {
     from {
         right: 100%;
         opacity: 1;
@@ -60,7 +54,7 @@
         right: 0;
         opacity: 0;
     }
-}
+} */
 
 html {
     font-size: calc(45% + 1vw) !important;
@@ -143,8 +137,6 @@ section {
     animation: rise 2s ease 0s 1 reverse forwards;
     height: 100vw;
     width: 100vw;
-    /* mix-blend-mode: saturation; */
-    /* z-index: -1; */
 }
 
 .sun_moon > svg > circle {
@@ -158,7 +150,6 @@ section {
     background-image: linear-gradient(lightBlue 0%, lightblue 30%, skyBlue 30%, skyBlue 75%, #42a7d6 75%, #42a7d6 100%);
     width: 100%;
     height: calc(100% + 10vh);
-    /* mix-blend-mode: normal; */
 }
 
 #home, #about_me {
@@ -175,27 +166,44 @@ section {
 
 #portfolio article .back, #portfolio article .forward {
     display: block;
-    height: 5em;
+    height: 3em;
+    width: 3em;
+    text-align: center;
     position: absolute;
-    top: calc(50% - 2.5em);
-}
-
-#portfolio article .back, #portfolio article .forward {
-    font-size: 3em;
+    top: 18ch;
     font-weight: 900;
-    color: grey;
+    color: white;
+    background-color: #222;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-sizing: content-box;
+    z-index: 500;
 }
 
 #portfolio article .back {
     left: 15px;
 }
 
+#portfolio article .forward i {
+    margin-left: 0.15em;
+}
+
+
+#portfolio article .back i{
+    margin-right: 0.15em;
+}
+
 #portfolio article .forward {
     right: 15px;
 }
 
+.back i, .forward i {
+    margin-top: 0.1em;
+    font-size: 2.5em;
+}
+
 #portfolio article .back:hover, #portfolio article .forward:hover {
-    color: #333;
+    background-color: black;
 }
 
 
@@ -385,42 +393,36 @@ footer {
     left: 16.667;
     display: flex;
     justify-content: space-evenly;
-    position: relative;
-    bottom: 5vh;
+    position: absolute;
+    bottom: 4ch;
 }
 
 .project {
-    overflow-x: hidden;
     position: relative;
     display: block;
-    width: calc(100% - 80px) !important;
     margin: auto;
-    padding: 0;
-    left: 40px;
 }
 
-.project > div.animated > div {
+div.animated .project {
     position: relative;
     width: 100%;
     height: 100%
 }
 
 .slide-out-left {
-    animation: slide-out-left 1s ease-in 0s 1 forwards;
+    animation: slide-in-right 1s ease-in 0s 1 reverse forwards;
 }
 
 .slide-out-right {
-    animation: slide-out-right 1s ease-in 0s 1 forwards;
+    animation: slide-out-right 1s ease-in 0s 1 normal;
 }
 
 .slide-in-left {
-    animation: slide-in-left 1s ease-in 0s 1 forwards;
-    /* animation-delay: 3s; */
+    animation: slide-out-right 1s ease-in 0s 1 reverse forwards;
 }
 
 .slide-in-right {
-    animation: slide-in-right 1s ease-in 0s 1 forwards;
-    /* animation-delay: 3s; */
+    animation: slide-in-right 1s ease-in 0s 1 normal;
 }
 
 .test {
@@ -442,17 +444,11 @@ footer {
 .animated > div {
     align-self: flex-start;
     min-width: 100%;
-    /* flex-basis: 100%; */
-    /* flex-grow: 1; */
 }
 
 .disappear {
     display: none;
 }
-
-/* .animated > div {
-    width: 100%;
-} */
 
 /* added the below media queries so that the sun/moon image stops at the middle on smaller devices*/
 
@@ -483,6 +479,6 @@ footer {
     }
     
     article > div:first-child {
-        min-height: calc(90vh - 5rem) !important;
+        height: 50ch !important;
     }
 }

@@ -16,15 +16,15 @@ const Navbar = (props) => {
                     </li>
                         <div className="sub-nav">
                           <li className="nav-item sub-nav">
-                          <a className="nav-link" href="#portfolio">Projects <i className="fa fa-caret-down"></i></a>
-                            <ul className="nav navbar-nav sub-nav-content">
+                          <a className="nav-link" href="#portfolio">Projects {/*<i className="fa fa-caret-down"></i>*/}</a>
+                            {/* <ul className="nav navbar-nav sub-nav-content">
                                 {
                                 props.titles.map(title => (
                                 <li key={title} className="nav-item">
                                   <a className="nav-link" href={"#"+title.replaceAll(" ","-")}>{title.toTitleCase()}</a> 
                                 </li> 
                                 ))}
-                            </ul>
+                            </ul> */}
                           </li> 
                         </div>
                     <li className="nav-item">
