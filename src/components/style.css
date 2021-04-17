@@ -21,17 +21,6 @@
     }
 }
 
-/* @keyframes slide-in-left {
-    from {
-        left: 100%;
-        opacity: 0;
-    }
-    to {
-        left: 0;
-        opacity: 1;
-    }
-} */
-
 @keyframes slide-out-right {
     from {
         opacity: 1;
@@ -44,17 +33,6 @@
         transform: translateX(-200%);
     }
 }
-
-/* @keyframes slide-out-left {
-    from {
-        right: 100%;
-        opacity: 1;
-    }
-    to {
-        right: 0;
-        opacity: 0;
-    }
-} */
 
 html {
     font-size: calc(45% + 1vw) !important;
@@ -129,7 +107,13 @@ section {
   border-radius: 0 0 0.5rem 0.5rem;
 }
 
-.sun_moon svg{
+.sun_moon {
+    mix-blend-mode: screen;
+    position: relative;
+    z-index: 1;
+}
+
+.sun_moon svg {
     position: fixed;
     left: calc(50% - 50vw);
     fill: transparent;
@@ -143,17 +127,26 @@ section {
     fill: transparent;
 }
 
-#about_me > .water  {
-    position: absolute;
-    top: -10vh;
-    margin: auto 0;
+#about_me  {
     background-image: linear-gradient(lightBlue 0%, lightblue 30%, skyBlue 30%, skyBlue 75%, #42a7d6 75%, #42a7d6 100%);
-    width: 100%;
-    height: calc(100% + 10vh);
 }
 
-#home, #about_me {
-    z-index: 3;
+
+#me img {
+    z-index: 4;
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid white;
+    background-color: #ffffff33;
+}
+
+#me {
+    position: relative;
+    z-index: 4;
+
+    bottom: 0;
 }
 
 #portfolio {
@@ -173,11 +166,11 @@ section {
     top: 18ch;
     font-weight: 900;
     color: white;
-    background-color: #222;
+    background-color: #333;
     border-radius: 50%;
     border: 3px solid white;
     box-sizing: content-box;
-    z-index: 500;
+    z-index: 20;
 }
 
 #portfolio article .back {
@@ -214,14 +207,19 @@ section {
     top: 0;
     height: 100vh;
     width: 100%;
-    background-image: linear-gradient(skyBlue 0%, skyBlue 85%, lightBlue 85%, lightBlue 100%);
-    mix-blend-mode: hard-light;
 }
 
-#about_me {
-    background-color: #ffffff88;
-    mix-blend-mode: hard-light;
+
+
+section *, article * {
+    position: relative;
+    z-index: 10;
 }
+
+#toc {
+    background-image: linear-gradient(skyBlue 0%, skyBlue 85%, lightBlue 85%, lightBlue 100%);
+}
+
 
 body {
     background-size: auto 100vmax;
@@ -302,7 +300,7 @@ button.navbar-toggler {
     background-color: white;
 }
 
-.jumbotron, .list-group, .list-group *, .card *{
+.jumbotron, .list-group, .list-group *, .card * {
     background-color: transparent !important;
 }
 

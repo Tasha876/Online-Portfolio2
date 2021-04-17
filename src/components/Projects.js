@@ -42,7 +42,8 @@ const Projects = ({projects}) => {
             default: {
                 return {
                     motion: "",
-                    index: state.index
+                    index: state.index,
+                    prev: null
                 }
             }
         }
@@ -77,7 +78,7 @@ const Projects = ({projects}) => {
                 ))}
 
         </Animated>
-        <span className="forward" onClick={()=>setProjectIndex({type:"forward"})}><i className="fas fa-chevron-right"></i></span>
+                <span className="forward" onClick={()=>setProjectIndex({type:"forward"})}><i className="fas fa-chevron-right"></i></span>
                 </div>
             </div>
         <div className="dots text-center"><RepeatDots n={projects.length} i={state.index}/></div>

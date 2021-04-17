@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background: lightblue;
+    }
+
+    div {
+        height: auto;
+        width: 100px;
+        border: 1px solid black ;
+        color: black;
+        font-size: 30px;
+    }
+
+    div.a {
+        isolation: isolate;
+    }
+
+    div.b {
+        isolation: auto;
+    }
+
+    .apply {
+        mix-blend-mode: hard-light;
+    }
+
+    div svg {
+        position: absolute;
+    }
+
+    img {
+        position: relative;
+        width: 100px;
+        height: auto;
+        z-index: 10;
+    }
+
+    .isolate, div p {
+        position: relative;
+        z-index: 10;
+    }
+
+
+</style>
+<body>
+    <div>
+        <div class="apply">
+        <svg height="100" width="100">
+        <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="yellow" />
+      </svg>
+    </div class="a">
+    <p>
+      apply</p>
+    <p class="a isolate"><img src="./public/assets/images/me.png"/></p></div>
+    </div>
+</body>
+</html>

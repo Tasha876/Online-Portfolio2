@@ -32,8 +32,9 @@ const Animated = (props) => {
         setPrev(el[props.prev])
         setAnimated({type: props.motion})
         console.log(animated)
-    }, [props])
+    }, [props.motion])
 
+    console.log("here")
     return (
         <div className="animated">
             <>{animated}</>

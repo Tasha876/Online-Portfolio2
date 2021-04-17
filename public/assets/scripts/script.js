@@ -3,7 +3,7 @@ moment().format();
 // setting loaded variable to false, so that I can update it later, so sun only rises one time
 let loaded = true;
 
-const main = document.querySelector("main");
+const main = document.querySelector("#root");
 const sunDiv = document.createElement("div");
 sunDiv.classList.add("sun_moon", "sun_moonrise");
 const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
@@ -16,8 +16,6 @@ circle.setAttribute("cy","50vw");
 circle.setAttribute("r","50vw");
 svg.appendChild(circle);
 sunDiv.appendChild(svg);
-
-const homeScreen = document.querySelector("#home");
 
 let url = "https://api.sunrise-sunset.org/json?lat=43.4643&lng=-80.5204&formatted=0&date=";
 let date = moment().format('YYYY-MM-DD');

@@ -14,20 +14,20 @@ const Main = (props) => {
     useScript(process.env.PUBLIC_URL + "/assets/scripts/script.js");
 
     return (
-        <div>
+        <main>
             <Navbar
             titles={props.titles}
             />
             <Splash />
             <AboutMe />
-            <main>
+            <ProjectIntro 
+              titles={props.titles}
+            />
+            {/* <main> */}
                 <section id="portfolio" className="container-fluid d-flex align-items-center flex-column px-0">
-                    <div className="deep"></div>
                     <div className="row w-100 my-auto"> 
-                        <div className="col-md-12">
-                            <ProjectIntro 
-                                titles={props.titles}
-                            />
+                        <div className="col-md-12 p-0">
+  
                             <Projects
                                 projects={props.projects}
                             />
@@ -35,9 +35,9 @@ const Main = (props) => {
                     </div>
                 </section>
                 <ResumeCall />
-            </main>
+            {/* </main> */}
             <Footer />
-        </div>
+        </main>
 
     )
 }
