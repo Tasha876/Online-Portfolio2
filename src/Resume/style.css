@@ -3,7 +3,7 @@
     top: 50px;
 }
 
-section, article {
+.resume :is(section, article) {
     min-height: auto !important;
 }
 

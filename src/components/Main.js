@@ -23,7 +23,6 @@ const Main = (props) => {
             <ProjectIntro 
               titles={props.titles}
             />
-            {/* <main> */}
                 <section id="portfolio" className="container-fluid d-flex align-items-center flex-column px-0">
                     <div className="row w-100 my-auto"> 
                         <div className="col-md-12 p-0">
@@ -35,7 +34,6 @@ const Main = (props) => {
                     </div>
                 </section>
                 <ResumeCall />
-            {/* </main> */}
             <Footer />
         </main>
 

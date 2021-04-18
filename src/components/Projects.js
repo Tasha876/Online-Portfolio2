@@ -53,17 +53,9 @@ const Projects = ({projects}) => {
     const [state, setProjectIndex] = useReducer(reducer, 0, init)
 
     return (
-        <article  className=" container-fluid d-flex align-items-center flex-column min-vh-100 mx-0">
+        <div className=" container-fluid d-flex align-items-center flex-column min-vh-100 mx-0">
         <div className="row min-vh-100 w-100">
             <div className="col-md-12 my-5">
-            <span className="back" onClick={()=>setProjectIndex({type:"back"})}><i className="fas fa-chevron-left"></i></span>
-        <Animated
-           key={state.index}
-           motion={state.motion}
-           index={state.index}
-           prev={state.prev}
-        >
-
                 { projects.map((project,i) => (
                     <Project
                         key={project.title}
@@ -76,13 +68,9 @@ const Projects = ({projects}) => {
                         url={project.url}
                 />
                 ))}
-
-        </Animated>
-                <span className="forward" onClick={()=>setProjectIndex({type:"forward"})}><i className="fas fa-chevron-right"></i></span>
                 </div>
             </div>
-        <div className="dots text-center"><RepeatDots n={projects.length} i={state.index}/></div>
-        </article>
+        </div>
     )
 }
 

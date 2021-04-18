@@ -5,8 +5,8 @@ import $ from "jquery"
 const Project = (props) => {
 
     return (
-                <div key={props.title} id={props.title.replaceAll(" ","-")} className="project jumbotron p-0 m-0">
-                    <div>
+                <article key={props.title} id={props.title.replaceAll(" ","-")} className="p-0 d-flex">
+                    <div className="project my-auto">
                         <h2 className="display-3 display-md-4 text-dark text-center">{props.title}.</h2>
                         <div className="row mx-2">
                             <div className="col-md-6 img-fluid m-auto">         
@@ -33,7 +33,7 @@ const Project = (props) => {
                             />
                         </div>
                     </div>
-                </div>
+                </article>
     )
 }
 

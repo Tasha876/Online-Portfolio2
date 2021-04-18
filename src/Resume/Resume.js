@@ -21,7 +21,7 @@ const Resume = () => {
                     <li><a href="#accomplishments">Selected Accomplishments</a></li>
                 </ul>
             </nav>
-        <main className="container h-100" style={style.main}>
+        <main className="container h-100 resume" style={style.main}>
         <header>
             <h1 className="display-3 text-center">Natasha Fray</h1>
         <p className="text-center">130 Fakestreet St W, Unit 321 Waterloo ON, N2A 1A1<br></br>
