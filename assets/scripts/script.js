@@ -1,3 +1,7 @@
+import moment from "moment"
+
+const Rise = () => {
+
 moment().format();
 
 // setting loaded variable to false, so that I can update it later, so sun only rises one time
@@ -33,6 +37,7 @@ fetch(url)
 
 
 const makeSunrise = () => {
+    debugger
     main.prepend(sunDiv);
     loaded = true;
 }
@@ -40,7 +45,16 @@ const makeSunrise = () => {
 window.addEventListener("focus", makeSunrise);
 
 window.addEventListener("load", makeSunrise);
+debugger
 
 window.addEventListener("blur", function() {
     if (loaded) removeEventListener("focus", makeSunrise)
 })
+
+// window.addEventListener("beforeunload", function() {
+//     window.addEventListener("focus", makeSunrise)
+//     // loaded = false
+// })
+}
+
+export default rise
