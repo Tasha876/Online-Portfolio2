@@ -1,10 +1,14 @@
-#root {
+#resume_page {
     position: relative;
     top: 50px;
 }
 
-.resume :is(section, article) {
+#resume_page :is(section, article) {
     min-height: auto !important;
+}
+
+#resume_page .display-4 {
+    font-size: xx-large !important;
 }
 
 section ul > li {
@@ -12,7 +16,7 @@ section ul > li {
     list-style-position: inside;
 }
 
-#root > .navbar {
+#resume_page > .navbar {
     margin: 0;
     overflow: hidden;
     transition: height 0.2s ease-in-out;
@@ -22,23 +26,24 @@ section ul > li {
     top: 0;
     width: 100%;
     padding: 5px;
-    z-index: 2;
+    z-index: 20;
 }
 
-#root > .navbar:hover {
+#resume_page > .navbar:hover {
     height: 50px;
     display: inline;
 }
 
 
-#root > .navbar > ul {
+#resume_page > .navbar > ul {
     opacity: 0 !important;
     transition: opacity .75s ease-in-out;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 
-#root > .navbar:hover > ul {
+#resume_page > .navbar:hover > ul {
     opacity: 1 !important;
 }
 

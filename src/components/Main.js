@@ -1,20 +1,25 @@
-import React from "react"
+import React, { useEffect } from "react"
 import Navbar from "./Navbar";
 import ProjectIntro from "./ProjectIntro"
 import Splash from "./Splash";
 import AboutMe from "./AboutMe";
 import Footer from "./Footer";
-import useScript from "../hooks/useScript";
 import ResumeCall from "./ResumeCall";
 import Projects from "./Projects"
 import './style.css'
-
+import rise from "../script"
+import NavMobile from "./NavMobile";
+import $ from "jquery"
 
 const Main = (props) => {
-    useScript(process.env.PUBLIC_URL + "/assets/scripts/script.js");
+    
+    useEffect(() => {
+        rise()
+    },[])
 
+    console.log($(window).width())
     return (
-        <main>
+        <main id="main_page">
             <Navbar
             titles={props.titles}
             />
@@ -34,7 +39,8 @@ const Main = (props) => {
                     </div>
                 </section>
                 <ResumeCall />
-            <Footer />
+                <Footer />
+                <NavMobile/>
         </main>
 
     )

@@ -102,3 +102,11 @@ dist
 
 # TernJS port file
 .tern-port
+
+#cover letter
+src/Resume/coverLetter.html
+
+#MAC
+.DS_Store
+
+test.html

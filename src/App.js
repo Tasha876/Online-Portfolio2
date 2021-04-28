@@ -18,8 +18,7 @@ String.prototype.toTitleCase = function() {
 const titles = projects.map(project => project.title)
 
 const App = () => {
-  console.log(window.location.pathname, ".")
-  document.title = "Natasha Fray | Online Portfolio";
+
   return (
     <Router basename={process.env.PUBLIC_URL}>
       <Switch>
@@ -35,6 +34,7 @@ const App = () => {
       </Switch>
     </Router>
   );
+
 }
 
 export default App;

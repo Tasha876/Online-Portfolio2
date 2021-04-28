@@ -2,16 +2,16 @@ import React from "react"
 
 const AboutMe = () => {
     return (
-        <section id="about_me" className="container-fluid d-flex align-items-center flex-column min-vh-100">
+        <section id="about_me" className="container-fluid d-flex align-items-center flex-column min-vh-100 p-md-2 p-0">
             <div className="row w-100 my-auto"> 
-                <div className="col-md-12">
+                <div className="col-md-12 p-md-2 p-0">
                     <article className="jumbotron m-xl-4 p-xl-4 pb-2 m-0 p-0">
                         <h1 className="display-3 text-dark text-center">A little bit about me.</h1> 
-                        <div className="container-fluid ">  
+                        <div className="container-fluid p-md-2 p-0">  
                         <div className="row w-100 m-0"> 
                         <div className="col-sm-6 order-sm-2">
                                 <div class="me" >
-                                        <img className="img-fluid" src={process.env.PUBLIC_URL + "/assets/images/me.png"}/>
+                                        <img className="img-fluid" src={process.env.PUBLIC_URL + "/assets/images/me.png"} alt="me"/>
                                 </div>
                             </div>
                             <div className="col-sm-6 order-sm-1">                      

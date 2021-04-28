@@ -2,10 +2,12 @@ import React from "react"
 
 const Navbar = (props) => {
     return (
-        <nav className="navbar navbar-expand-lg nav-transparent fixed-top navbar-light text-dark m-0 full-screen-scroller">
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <>
+        <nav className="navbar navbar-expand-sm nav-transparent fixed-top navbar-light text-dark m-0 full-screen-scroller">
+
+            {/* <div className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
-            </button>
+            </div> */}
             <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul className="nav navbar-nav ">
                     <li className="nav-item">
@@ -15,16 +17,16 @@ const Navbar = (props) => {
                         <a className="nav-link" href="#about_me">About Me</a>
                     </li>
                         <div className="sub-nav">
-                          <li className="nav-item sub-nav">
-                          <a className="nav-link" href="#portfolio">Projects {/*<i className="fa fa-caret-down"></i>*/}</a>
-                            {/* <ul className="nav navbar-nav sub-nav-content">
+                          <li className="nav-item">
+                          <a className="nav-link" href="#toc">Projects {/*<i className="fa fa-caret-down"></i>*/}</a>
+                            <ul className="nav navbar-nav sub-nav-content">
                                 {
                                 props.titles.map(title => (
                                 <li key={title} className="nav-item">
                                   <a className="nav-link" href={"#"+title.replaceAll(" ","-")}>{title.toTitleCase()}</a> 
                                 </li> 
                                 ))}
-                            </ul> */}
+                            </ul>
                           </li> 
                         </div>
                     <li className="nav-item">
@@ -33,6 +35,7 @@ const Navbar = (props) => {
                 </ul>
             </div>
           </nav>
+        </>
     )
 }
 
