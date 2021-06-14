@@ -6,9 +6,11 @@ import AboutMe from "./AboutMe";
 import Footer from "./Footer";
 import ResumeCall from "./ResumeCall";
 import Projects from "./Projects"
+import NavMobile from "./NavMobile";
+import Contacts from "./Contacts";
+import Skills from "./Skills";
 import './style.css'
 import rise from "../script"
-import NavMobile from "./NavMobile";
 import $ from "jquery"
 
 const Main = (props) => {
@@ -23,6 +25,7 @@ const Main = (props) => {
             <Navbar
             titles={props.titles}
             />
+            <Contacts />
             <Splash />
             <AboutMe />
             <ProjectIntro 
@@ -38,6 +41,7 @@ const Main = (props) => {
                     </div>
                     </div>
                 </section>
+                <Skills />
                 <ResumeCall />
                 <Footer />
                 <NavMobile/>

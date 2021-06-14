@@ -1,0 +1,150 @@
+{
+    "skills" : [
+        "Git",
+        "HTML",
+        "CSS",
+        "jQuery",
+        "JavaScript",
+        "Bootstrap",
+        "Node.js",
+        "MySql",
+        "MongoDB",
+        "Express.js",
+        "React.js"
+    ],
+    "technologies": [
+        {
+            "name": "Git",
+            "desc": "Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.",
+            "link": "https://git-scm.com/",
+            "skill": true
+        },
+        {
+            "name": "HTML",
+            "desc": "HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content.",
+            "link": "https://developer.mozilla.org/en-US/docs/Web/HTML",
+            "skill": true
+        },
+        {
+            "name": "CSS",
+            "desc": "Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML.",
+            "link": "https://developer.mozilla.org/en-US/docs/Web/css",
+            "skill": true
+        },
+        {
+            "name": "jQuery",
+            "desc": "jQuery is a fast, small, and feature-rich JavaScript library.",
+            "link": "https://jquery.com/",
+            "skill": true
+        },
+        {
+            "name": "JavaScript",
+            "desc": "JavaScript is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions.",
+            "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+            "skill": true
+        },
+        {
+            "name": "Vanilla JavaScript",
+            "desc": "JavaScript is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions.",
+            "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+            "skill": false
+        },
+        {
+            "name": "Bootstrap",
+            "desc": "Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development.",
+            "link": "https://getbootstrap.com/",
+            "skill": true
+        },
+        {
+            "name": "Node.js",
+            "desc": "Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser.",
+            "link": "https://nodejs.org/en/",
+            "skill": true
+            
+        },
+        {
+            "name": "MySQL",
+            "desc": "MySQL Database Service is a fully managed database service to deploy cloud-​native applications.",
+            "link": "https://www.mysql.com/",
+            "skill": true
+        },
+        {
+            "name": "MongoDB",
+            "desc": "MongoDB is a general purpose, document-based, distributed database built for modern application developers and for the cloud era.",
+            "link": "https://www.mongodb.com/",
+            "skill": true
+        },
+        {
+            "name": "Semantic UI",
+            "desc": "Semantic is a development framework that helps create beautiful, responsive layouts using human-friendly HTML.",
+            "link": "https://semantic-ui.com/",
+            "skill": false
+        },
+        {
+            "name": "React.js",
+            "desc": "React is a library for building composable user interfaces. It encourages the creation of reusable UI components, which present data that changes over time. ",
+            "link": "https://reactjs.org/",
+            "skill": true
+        },
+        {
+            "name": "Handlebars",
+            "desc": "Handlebars is a simple templating language. It uses a template and an input object to generate HTML or other text formats. Handlebars templates look like regular text with embedded Handlebars expressions",
+            "link": "https://handlebarsjs.com/",
+            "skill": true
+        },
+        {
+            "name": "Canvas API",
+            "desc": "The Canvas API provides a means for drawing graphics via JavaScript and the HTML <canvas> element.",
+            "link": "https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API",
+            "skill": false
+        },
+        {
+            "name": "Service Workers",
+            "desc": "A service worker is a script that your browser runs in the background, separate from a web page, opening the door to features that don't need a web page or user interaction.",
+            "link": "https://developers.google.com/web/fundamentals/primers/service-workers",
+            "skill": true
+        },
+        {
+            "name": "IndexedDB",
+            "desc": "IndexedDB is a low-level API for client-side storage of significant amounts of structured data.",
+            "link": "https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API",
+            "skill": true
+        },
+        {
+            "name": "Sequelize",
+            "desc": "Sequelize is a promise-based Node.js ORM.",
+            "link": "http://sequelize.org/",
+            "skill": true
+        },
+        {
+            "name": "Passport",
+            "desc": "Passport is authentication middleware for Node.js.",
+            "link": "http://www.passportjs.org/",
+            "skill": true
+        },
+        {
+            "name": "Geolocation API",
+            "desc": "The Geolocation API allows the user to provide their location to web applications if they so desire.",
+            "link": "https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API",
+            "skill": false
+        },
+        {
+            "name": "OrgHunter API",
+            "desc": "The OrgHunter Charity API provides developers access to over 2M charities in our database.",
+            "link": "http://charityapi.orghunter.com/",
+            "skill": false
+        },
+        {
+            "name": "TasteDive API",
+            "desc": "TasteDive helps you discover new music, movies, TV shows, books, authors, games, podcasts, and people with shared interests.",
+            "link": "https://tastedive.com/read/about",
+            "skill": false
+        },
+        {
+            "name": "Google Books API",
+            "desc": "The APIs in the Google Books API Family let you bring Google Books features to your site or application.",
+            "link": "https://developers.google.com/books/docs/overview",
+            "skill": false
+        }
+    ]
+}

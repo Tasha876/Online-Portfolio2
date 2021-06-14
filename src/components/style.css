@@ -122,7 +122,7 @@ section {
 }
 
 .sun_moon > svg > circle {
-    fill: transparent;
+    fill: gold;
 }
 
 #about_me  {
@@ -156,9 +156,13 @@ section {
     position: relative;
 }
 
-section *, article * {
+section > *, article > * {
     position: relative;
     z-index: 10;
+}
+
+#skills * {
+    position: relative;
 }
 
 #toc {
@@ -305,6 +309,34 @@ ul.sub-nav > li {
     display: inline;
 }
 
+.contacts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1031;
+}
+
+.contacts > ul > li {
+    color: black;
+    background: white;
+    box-shadow: 0 0 15px white;
+    display: inline;
+    padding: 0.5rem;
+    border-radius: 50% 50% 0 0;
+}
+
+.contacts > ul {
+    padding: 0.5rem 1rem;
+}
+
+.contacts > ul > li > a {
+    color: rgba(0,0,0,.5);
+}
+
+.contacts > ul > li > a:hover {
+    color: rgba(0,0,0,.7);
+}
+
 .jumbotron, .list-group, .list-group *, .card * {
     background-color: transparent !important;
 }
@@ -344,6 +376,34 @@ p {
     opacity: 0.3;
 }
 
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row-reverse;
+    margin: 0;
+}
+
+.skills-list > h3 {
+    margin: 0 0.5rem;
+    padding: 1rem;
+    text-align: center;
+    color: white;
+}
+
+.skills-list > h3:before {
+    content: "";
+    background: #666;
+    box-shadow: 0 0 15px white;
+    border-radius: 0.25rem;
+    border: 0.25rem solid #555;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 3rem;
+    z-index: -200;
+    transform: translate(-1rem, -0.5rem);
+}
 
 p a {
     margin: 0;
@@ -367,6 +427,10 @@ p a:hover, .call a:hover {
     font-size: 1.5rem;
 }
 
+#portfolio .call {
+    font-size: 1.1rem;
+}
+
 .call button {
     font-weight: 600;
     border: none;
@@ -385,6 +449,67 @@ p a:hover, .call a:hover {
 
 .call button:focus {
     outline: 0;
+}
+#portfolio a {
+    position: relative;
+}
+
+#portfolio [aria-label]:after {
+    content: attr(aria-label);
+    /* display: none; */
+    opacity: 0;
+    position: absolute;
+    /* width: 180px; */
+    /* max-width: 150%; */
+    top: 100%;
+    left: 10%;
+    right: -16ch;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    white-space: wrap;
+    font-size: 0.6rem;
+    font-family: Arial;
+    background: white !important;
+    color: #333 !important;
+    box-shadow: #00000044 1px 1px 3px;
+    pointer-events: none;
+    white-space: normal;
+    text-shadow: none;
+    text-align: left;
+    z-index: 500;
+}
+
+#portfolio [aria-label]:hover:after {
+    /* display: block; */
+    animation: top-nav-appear 0.5s ease-in-out 0.5s 1 normal forwards;
+}
+
+/* li[title]:hover:after {
+    
+} */
+
+.tech {
+    display: block;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.tech ul {
+    display: inline;
+}
+
+.tech ul > li {
+    display: inline;
+    line-height: 100% !important;
+}
+
+.tech ul > li > a {
+    white-space: nowrap;
+}
+
+.tech ul > li:not(:last-child):after {
+    content: " | ";
+    color: #00000033;
 }
 
 footer {
@@ -462,3 +587,15 @@ footer {
         height: 50ch !important;
     } */
 }
+
+@media print {
+    a {
+        white-space: nowrap;
+        text-decoration: none !important;
+    }
+
+    a:not(a[href^="mailto:"])::after{
+        content: ": " attr(href);
+        color: #444;
+    }
+  }

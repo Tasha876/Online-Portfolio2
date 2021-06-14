@@ -30,6 +30,9 @@ const Navbar = (props) => {
                           </li> 
                         </div>
                     <li className="nav-item">
+                        <a className="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li className="nav-item">
                         <a className="nav-link" href="#resume">Resum&eacute;</a>
                     </li>
                 </ul>

@@ -3,15 +3,17 @@ import React from "react"
 import data from "./projectList.json"
 
 class Project {
-  constructor(title, image, url, summary) {
+  constructor(title, image, url,  git="#", summary, technologies) {
     this.title = title
     this.image = image
     this.url = url
+    this.git = git
     this.summary = summary
+    this.technologies = technologies
 
-    this.link = function (linkText) {
+    this.link = function (linkText,url=this.url) {
       return (
-        <a key={this.title} className="sm-text-decoration-none" href={this.url} target="_blank" rel="noreferrer">{linkText}</a>
+        <a key={this.title} className="sm-text-decoration-none" href={url} target="_blank" rel="noreferrer">{linkText}</a>
       )
     }
     this.description = function () {
@@ -25,7 +27,9 @@ const projects = data.projects.map(project => {
     project.title,
     project.image,
     project.url,
-    project.summary
+    project.git,
+    project.summary,
+    project.technologies
     )
 })
 

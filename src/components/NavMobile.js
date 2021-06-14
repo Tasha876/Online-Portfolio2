@@ -39,6 +39,7 @@ const NavMobile = () => {
                 <li className="text-center"><a href="#home"><i title="home" className="fas fa-home"></i><br/><small>home</small></a></li>
                 <li className="text-center"><a href="#about_me"><i title="about me" className="far fa-comment"></i><br/><small>about</small></a></li>
                 <li className="text-center"><a href="#toc"><i title="projects" className="fas fa-briefcase"></i><br/><small>projects</small></a></li>
+                <li className="text-center"><a href="#skills"><i title="skills" className="fas fa-graduation-cap"></i><br/><small>skills</small></a></li>
                 <li className="text-center"><a href="#resume"><i title="resume" className="fas fa-align-left"></i><br/><small>resume</small></a></li>
             </ul>
         </nav>

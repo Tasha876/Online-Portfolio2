@@ -21,14 +21,16 @@ const Project = (props) => {
                         summary={props.summary}
                         link={props.link}
                         url={props.url}
+                        git={props.git}
                         call={
                             function () {
                                 return (
                                     <div className="text-center">
-                                        {props.link("Check it out here")}
+                                        {props.link("Project")} | {props.link("Github",props.git)} 
                                     </div>
                                 )}
                             } 
+                        technologies={props.technologies}
                     />
                 </div>
             </div>

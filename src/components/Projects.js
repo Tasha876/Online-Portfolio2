@@ -17,6 +17,8 @@ const Projects = ({projects}) => {
                         description={project.description}
                         summary={project.summary}
                         url={project.url}
+                        git={project.git}  
+                        technologies={project.technologies} 
                 />
                 ))}
                 </div>

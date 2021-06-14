@@ -34,9 +34,11 @@ const Resume = () => {
         <main className="container h-100" style={style.main}>
         <header>
             <h1 className="display-3 text-center">Natasha Fray</h1>
-        <p className="text-center">130 Fakestreet St W, Unit 321 Waterloo ON, N2A 1A1<br></br>
-        519-555-5555 | natasha.fray9@gmail.com<br></br>
-        <a href="https://www.linkedin.com/in/natasha-fray-926ba61b6/" target="_blank" rel="noreferrer">LinkedIn</a> | <a href="https://github.com/Tasha876" target="_blank" rel="noreferrer">GitHub </a> | <a href="https://tasha876.github.io/Online-Portfolio2/" target="_blank" rel="noreferrer">Portfolio</a></p>
+        <p className="text-center">
+        {/* 130 Fakestreet St W, Unit 321 Waterloo ON, N2A 1A1<br/> */}
+        {/* 519-555-5555  */}
+        <a href={"mailto:natasha.fray9@gmail.com"}>natasha.fray9@gmail.com</a><br/>
+        <a href="https://www.linkedin.com/in/natasha-fray/" target="_blank" rel="noreferrer">LinkedIn</a> | <a href="https://github.com/Tasha876" target="_blank" rel="noreferrer">GitHub</a> | <a href="https://tasha876.github.io/Online-Portfolio2/" target="_blank" rel="noreferrer">Portfolio</a></p>
 
         </header>
         <h2 id="profile" className="display-4" >PROFILE:</h2>
@@ -82,7 +84,7 @@ const Resume = () => {
                 </article>
 
             <article>
-                <strong><a href={"https://github.com/Tasha876/Employee-Summary"} target="_blank" rel="noreferrer">Employee Summary Generator </a></strong>
+                <strong><a href={"https://github.com/Tasha876/Employee-Summary"} target="_blank" rel="noreferrer">Employee Summary Generator</a></strong>
                     <ul>
                         <li>Created a command line based interface that allows easy creation of an employee summary.</li>
                         <li>Uses Node.js and Inquirer to prompt users for data in order to build the website.</li>
