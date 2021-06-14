@@ -14,7 +14,6 @@ const NavMobile = () => {
     })
 
     useEffect(() => {
-        console.log($(document).scrollTop(),hasScrolled)
         $(document).on('scroll', () => {
             if ($(document).scrollTop() > 10 && hasScrolled === false) {
                 setHasScrolled(true)

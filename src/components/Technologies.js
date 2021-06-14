@@ -10,13 +10,11 @@ const mapTechToInfo = (techUsed) => {
 const Technologies = ({ technologies }) => {
 
     const techUsed = technologies.map(({ name: tech }) => mapTechToInfo(tech))
-    console.log(techUsed)
 
     return (
         <p className="tech">
         <span>Technologies Used: </span>
         <ul>
-            {console.log(techUsed)}
             {techUsed.map(({ name, desc, link }) => (
                 <li>
                     <a aria-label={desc || name } target="_blank" rel="noreferrer" href={link || null}>{ name }</a>
