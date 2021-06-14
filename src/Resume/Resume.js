@@ -58,7 +58,7 @@ const Resume = () => {
         <hr></hr>
         <section>
             <article>
-                <strong><a href={"https://novelty.herokuapp.com"} target="_blank" rel="noreferrer">Book Suggestion Application</a></strong> | <a href="https://github.com/Tasha876/NOVELty">Github</a>
+                <strong><a href={"https://novelty.herokuapp.com"} target="_blank" rel="noreferrer">Book Suggestion Application</a></strong> | <a href="https://github.com/Tasha876/NOVELty-1">Github</a>
                     <ul>
                         <li>Worked as a team to create an app that recommends novels to users based on books they have indicated to be reading or to have read as well as users’ ratings of those books.</li>
                         <li>Clean interface completed using bootstrap.</li>
@@ -100,7 +100,7 @@ const Resume = () => {
             </article>
 
         </section>
-        
+
         <h2 id="experience" className="display-4">EXPERIENCE:</h2>
 
         <hr></hr>
