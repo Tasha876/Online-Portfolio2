@@ -54,24 +54,6 @@ const Resume = () => {
         <p><strong>APPLICATIONS: </strong>Bootstrap, jQuery, Node.js, Express.js, React.js, Git.</p>
         </section>
 
-        <h2 id="education" className="display-4">EDUCATION:</h2>
-        <hr></hr>
-        <section>
-            <article>
-                <strong>Coding Bootcamp</strong>
-                <p className="float-right">September 2020 – April 2021</p>
-                <p>A focused 24-week program focused on gaining relevant technical programming skills.</p>
-            </article>
-
-
-            <article>
-                <strong>Bachelor of Math</strong>
-                <p className="float-right">	2015 – 2020</p>
-                <p>University of Waterloo, Waterloo, ON</p>
-            </article>
-
-        </section>
-
         <h2 id="projects" className="display-4">PROJECTS:</h2>
         <hr></hr>
         <section>
@@ -101,6 +83,24 @@ const Resume = () => {
             </article>
         </section>
 
+        <h2 id="education" className="display-4">EDUCATION:</h2>
+        <hr></hr>
+        <section>
+            <article>
+                <strong>Coding Bootcamp</strong>
+                <p className="float-right">September 2020 – April 2021</p>
+                <p>A focused 24-week program focused on gaining relevant technical programming skills.</p>
+            </article>
+
+
+            <article>
+                <strong>Bachelor of Math</strong>
+                <p className="float-right">	2015 – 2020</p>
+                <p>University of Waterloo, Waterloo, ON</p>
+            </article>
+
+        </section>
+        
         <h2 id="experience" className="display-4">EXPERIENCE:</h2>
 
         <hr></hr>
