@@ -323,10 +323,12 @@ ul.sub-nav > li {
     display: inline;
     padding: 0.5rem;
     border-radius: 50% 50% 0 0;
+    font-size: max(18px, 100%);
+    vertical-align: baseline;
 }
 
 .contacts > ul {
-    padding: 0.5rem 1rem;
+    padding: 1rem;
 }
 
 .contacts > ul > li > a {
