@@ -314,6 +314,7 @@ ul.sub-nav > li {
     top: 0;
     left: 0;
     z-index: 1031;
+    margin: 1rem 1rem 0;
 }
 
 .contacts > ul > li {
@@ -325,18 +326,56 @@ ul.sub-nav > li {
     border-radius: 50% 50% 0 0;
     font-size: max(18px, 100%);
     vertical-align: baseline;
+    box-shadow: none;
 }
 
 .contacts > ul {
-    padding: 1rem;
+    padding: 0;
+    margin: 0;
 }
 
 .contacts > ul > li > a {
     color: rgba(0,0,0,.5);
+    display: inline-block;
+    padding: 0.5rem 0 1rem 0;
+    margin: -0.5rem 0;
 }
 
 .contacts > ul > li > a:hover {
     color: rgba(0,0,0,.7);
+}
+
+.contacts > ul > li:hover {
+    background: #42a7d6;
+}
+
+.contacts > ul > li:hover > a:first-child > i{
+    color: whitesmoke;
+}
+
+.contacts > ul > li:hover > a:first-child > i {
+    color: whitesmoke;
+}
+
+.contacts > ul > li a:not(:first-child) {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    font-size: 0.7rem;
+    border-radius: 0 1rem 1rem 1rem;
+    padding: 0 0.5rem;
+    display: none;
+}
+
+.contacts > ul > li:not(:first-child) a:not(:first-child) {
+    border-radius: 1rem;
+}
+
+.contacts > ul > li:hover > a:not(:first-child) {
+    background: #42a7d6;
+    color: whitesmoke;
+    display: inline;
+    white-space: nowrap;
 }
 
 .jumbotron, .list-group, .list-group *, .card * {

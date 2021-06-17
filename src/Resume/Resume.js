@@ -35,7 +35,7 @@ const Resume = () => {
         <header>
             <h1 className="display-3 text-center">Natasha Fray</h1>
         <p className="text-center">
-        {/* 130 Fakestreet St W, Unit 321 Waterloo ON, N2A 1A1<br/> */}
+        Waterloo ON<br/>
         {/* 519-555-5555  */}
         <a href={"mailto:natasha.fray9@gmail.com"}>natasha.fray9@gmail.com</a><br/>
         <a href="https://www.linkedin.com/in/natasha-fray/" target="_blank" rel="noreferrer">LinkedIn</a> | <a href="https://github.com/Tasha876" target="_blank" rel="noreferrer">GitHub</a> | <a href="https://tasha876.github.io/Online-Portfolio2/" target="_blank" rel="noreferrer">Portfolio</a></p>
