@@ -132,9 +132,9 @@ section {
 
 .me img {
     z-index: 4;
-    position: relative;
-    width: 100%;
-    height: auto;
+    position: absolute;
+    width: auto;
+    height: 100%;
     border-radius: 50%;
     border: 3px solid #00000088;
     background-color: #ffffff33;
@@ -142,10 +142,13 @@ section {
 }
 
 .me {
+    width: 100%;
+    height: 0;
     position: relative;
     z-index: 4;
-
-    bottom: 0;
+    padding-bottom: 100%;
+    border-radius: 50%;
+    margin-bottom: 2rem;
 }
 
 #portfolio {
@@ -301,7 +304,7 @@ ul.sub-nav > li {
 }
 
 .sub-nav:hover .sub-nav-content {
-    animation: top-nav-appear 0.25s ease-in-out 1s 1 normal forwards;
+    animation: top-nav-appear 0.25s ease-in-out 0.3s 1 normal forwards;
     /* transform: scaleX(100%); */
 }
 
@@ -323,7 +326,7 @@ ul.sub-nav > li {
     box-shadow: 0 0 15px white;
     display: inline;
     padding: 0.5rem;
-    border-radius: 50% 50% 0 0;
+    border-radius: 9999px 9999px 0 0;
     font-size: max(18px, 100%);
     vertical-align: baseline;
     box-shadow: none;
@@ -337,8 +340,8 @@ ul.sub-nav > li {
 .contacts > ul > li > a {
     color: rgba(0,0,0,.5);
     display: inline-block;
-    padding: 0.5rem 0 1rem 0;
-    margin: -0.5rem 0;
+    padding: 0.5rem 0;
+    margin: 0 0 -0.5rem 0;
 }
 
 .contacts > ul > li > a:hover {
@@ -347,6 +350,11 @@ ul.sub-nav > li {
 
 .contacts > ul > li:hover {
     background: #42a7d6;
+    /* color: hsl(199, 64%, 55%); */
+}
+
+.contacts > ul:hover li:first-child {
+    padding-bottom: 1.25rem;
 }
 
 .contacts > ul > li:hover > a:first-child > i{
@@ -426,24 +434,29 @@ p {
 }
 
 .skills-list > h3 {
-    margin: 0 0.5rem;
+    margin-top: -1rem;
     padding: 1rem;
     text-align: center;
     color: white;
 }
 
+.skills-list > h3:hover:before {
+    background-color: hsl(199, 100%, 30%);
+    border-color: ivory;
+}
+
 .skills-list > h3:before {
     content: "";
-    background: #666;
-    box-shadow: 0 0 15px white;
-    border-radius: 0.25rem;
-    border: 0.25rem solid #555;
+    background: hsl(199, 61%, 50%);
+    box-shadow: 0 15px hsl(199, 81%, 40%);
+    border-radius: 50% 50% 1rem 1rem;
+    /* border: 0.25rem solid #555; */
     position: absolute;
     display: block;
     width: 100%;
-    height: 3rem;
+    height: 4rem;
     z-index: -200;
-    transform: translate(-1rem, -0.5rem);
+    transform: translate(-1rem, -1rem);
 }
 
 p a {

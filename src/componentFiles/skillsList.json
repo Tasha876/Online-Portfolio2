@@ -44,12 +44,6 @@
             "skill": true
         },
         {
-            "name": "Vanilla JavaScript",
-            "desc": "JavaScript is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions.",
-            "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-            "skill": false
-        },
-        {
             "name": "Bootstrap",
             "desc": "Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development.",
             "link": "https://getbootstrap.com/",

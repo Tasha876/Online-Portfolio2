@@ -56,7 +56,7 @@
             "summary": "I created a simple ___. It generates strong passwords using Javascript.",
             "technologies": [
                 {
-                    "name": "Vanilla JavaScript"
+                    "name": "JavaScript"
                 },
                 {
                     "name": "Bootstrap"
@@ -83,7 +83,7 @@
                     "name": "jQuery"
                 },
                 {
-                    "name": "Vanilla JavaScript"
+                    "name": "JavaScript"
                 }   
             ]
         },
