@@ -1,0 +1,22 @@
+@keyframes loading-animation {
+    from {
+        background: skyblue;
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.loader {
+    animation: loading-animation 1000ms ease-in infinite alternate;
+    height: 100vh !important;
+    width: 100vw !important;
+    background: skyblue;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    animation: loading-animation 2000ms ease-out 1000ms 1 reverse;
+}

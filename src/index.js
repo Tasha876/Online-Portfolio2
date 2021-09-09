@@ -8,4 +8,4 @@ import './components/text-dark.css'
 import 'bootstrap/dist/js/bootstrap.min.js'
 import '@fortawesome/fontawesome-free/css/all.min.css'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App/>, document.getElementById('root'));

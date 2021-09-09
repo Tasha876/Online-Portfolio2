@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Main from "./components/Main";
 import Resume from "./Resume/Resume";
@@ -19,7 +19,20 @@ const titles = projects.map(project => project.title)
 
 const App = () => {
 
-  return (
+  const [loading, setLoading] = useState(true)
+
+  useEffect(()=> {
+      if (loading) {
+        setTimeout(()=>{
+          setLoading(false)
+          document.querySelector('.loader').remove()
+        },1000)
+      }
+  },[])
+
+
+return (
+  loading? null :
     <Router basename={process.env.PUBLIC_URL}>
       <Switch>
         <Route exact path="/resume">
@@ -33,8 +46,6 @@ const App = () => {
         </Route>
       </Switch>
     </Router>
-  );
-
+  )
 }
-
 export default App;

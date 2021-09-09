@@ -20,15 +20,10 @@
 
 @keyframes top-nav-appear {
     from {
-        /* display: flex; */
         opacity: 0;
-        /* transform-origin: right;
-        transform: scaleX(0); */
     }
     to {
-        /* display: flex !important; */
         opacity: 1;
-        /* transform: scaleX(1); */
     }
 }
 
@@ -267,10 +262,7 @@ nav * {
 }
 
 .sub-nav-content {
-  /* transform: scaleX(0); */
-  /* display: none !important; */
   opacity: 0;
-  /* max-width: 0; */
   overflow: hidden;
   position: absolute;
   right: 1rem;
@@ -305,7 +297,6 @@ ul.sub-nav > li {
 
 .sub-nav:hover .sub-nav-content {
     animation: top-nav-appear 0.25s ease-in-out 0.3s 1 normal forwards;
-    /* transform: scaleX(100%); */
 }
 
 .nav-items > li{
@@ -350,7 +341,6 @@ ul.sub-nav > li {
 
 .contacts > ul > li:hover {
     background: #42a7d6;
-    /* color: hsl(199, 64%, 55%); */
 }
 
 .contacts > ul:hover li:first-child {
@@ -450,7 +440,6 @@ p {
     background: hsl(199, 61%, 50%);
     box-shadow: 0 15px hsl(199, 81%, 40%);
     border-radius: 50% 50% 1rem 1rem;
-    /* border: 0.25rem solid #555; */
     position: absolute;
     display: block;
     width: 100%;
@@ -510,11 +499,8 @@ p a:hover, .call a:hover {
 
 #portfolio [aria-label]:after {
     content: attr(aria-label);
-    /* display: none; */
     opacity: 0;
     position: absolute;
-    /* width: 180px; */
-    /* max-width: 150%; */
     top: 100%;
     left: 10%;
     right: -16ch;
@@ -534,13 +520,8 @@ p a:hover, .call a:hover {
 }
 
 #portfolio [aria-label]:hover:after {
-    /* display: block; */
     animation: top-nav-appear 0.5s ease-in-out 0.5s 1 normal forwards;
 }
-
-/* li[title]:hover:after {
-    
-} */
 
 .tech {
     display: block;
@@ -636,10 +617,6 @@ footer {
     .mobile > nav {
         display: none;
     }
-    
-    /* article > div:first-child {
-        height: 50ch !important;
-    } */
 }
 
 @media print {
