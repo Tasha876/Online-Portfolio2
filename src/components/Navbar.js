@@ -22,7 +22,7 @@ const Navbar = (props) => {
                             <ul className="nav navbar-nav sub-nav-content">
                                 {
                                 props.titles.map(title => (
-                                <li key={title} className="nav-item">
+                                <li key={title + ' nav'} className="nav-item">
                                   <a className="nav-link" href={"#"+title.replaceAll(" ","-")}>{title.toTitleCase()}</a> 
                                 </li> 
                                 ))}

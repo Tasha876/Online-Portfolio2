@@ -9,7 +9,7 @@ const Projects = ({projects}) => {
             <div className="col-md-12 my-5">
                 { projects.map((project,i) => (
                     <Project
-                        key={project.title}
+                        key={project.title + ' project'}
                         index={i}
                         title={project.title}
                         link={project.link}

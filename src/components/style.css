@@ -281,6 +281,18 @@ nav * {
   float: right;
   overflow: hidden;
   width: auto;
+  padding-top: 3rem;
+  margin-top: -3rem;
+}
+
+/* increases hoverable area above and below the sub navigation */
+.sub-nav:after {
+  content: '';
+  position: absolute;
+  top: -33%;
+  left: 0;
+  width: 100%;
+  height: 300%;
 }
 
 .sub-nav {

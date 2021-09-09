@@ -15,7 +15,7 @@ const Project = (props) => {
                         <div className="cover mx-auto"></div>
                     </div>
                     <Summary
-                        key={props.title}
+                        key={props.title + ' summary'}
                         title={props.title}
                         description={props.description}
                         summary={props.summary}

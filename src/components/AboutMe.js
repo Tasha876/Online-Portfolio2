@@ -10,7 +10,7 @@ const AboutMe = () => {
                         <div className="container-fluid p-md-2 p-0">  
                         <div className="row w-100 m-0"> 
                         <div className="col-sm-6 order-sm-2">
-                                <div class="me" >
+                                <div className="me" >
                                         <img className="img-fluid" src={process.env.PUBLIC_URL + "/assets/images/me.png"} alt="me"/>
                                 </div>
                             </div>

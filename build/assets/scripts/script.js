@@ -51,10 +51,6 @@ window.addEventListener("blur", function() {
     if (loaded) removeEventListener("focus", makeSunrise)
 })
 
-// window.addEventListener("beforeunload", function() {
-//     window.addEventListener("focus", makeSunrise)
-//     // loaded = false
-// })
 }
 
 export default rise

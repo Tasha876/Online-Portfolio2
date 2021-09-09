@@ -13,11 +13,11 @@ class Project {
 
     this.link = function (linkText,url=this.url) {
       return (
-        <a key={this.title} className="sm-text-decoration-none" href={url} target="_blank" rel="noreferrer">{linkText}</a>
+        <a key={linkText} className="sm-text-decoration-none" href={url} target="_blank" rel="noreferrer">{linkText}</a>
       )
     }
     this.description = function () {
-      return <p key={this.title}> {this.summary.replaceJSX("___", this.link(this.title.toTitleCase()))}</p>
+      return <p key={this.title + ' description'}> {this.summary.replaceJSX("___", this.link(this.title.toTitleCase()))}</p>
     }
   }
 }

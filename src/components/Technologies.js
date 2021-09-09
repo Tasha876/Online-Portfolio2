@@ -12,16 +12,16 @@ const Technologies = ({ technologies }) => {
     const techUsed = technologies.map(({ name: tech }) => mapTechToInfo(tech))
 
     return (
-        <p className="tech">
+        <div className="tech">
         <span>Technologies Used: </span>
         <ul>
             {techUsed.map(({ name, desc, link }) => (
-                <li>
+                <li key={name}>
                     <a aria-label={desc || name } target="_blank" rel="noreferrer" href={link || null}>{ name }</a>
                 </li>
             ))}
         </ul>
-        </p>
+        </div>
     )
 }
 
