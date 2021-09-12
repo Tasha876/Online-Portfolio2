@@ -28,7 +28,7 @@
 }
 
 html {
-    font-size: calc(45% + 1vw) !important;
+    font-size: clamp(0.75rem, 0.75vw + 0.6rem, 1.5rem) !important;
     scroll-behavior: smooth;
 }
 
