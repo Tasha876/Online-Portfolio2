@@ -10,7 +10,9 @@ const Project = (props) => {
                 <div className="row mx-2">
                     <div className="col-md-6 img-fluid m-auto p-md-2 p-0">         
                         <div className="frame mx-auto">
-                        <img className="img-thumbnail rounded-0 d-block text-dark" src={process.env.PUBLIC_URL + props.image} alt={props.title}></img>
+                        <a href={props.url}>
+                            <img className="img-thumbnail rounded-0 d-block text-dark" src={process.env.PUBLIC_URL + props.image} alt={props.title}></img>
+                        </a>
                         </div>
                         <div className="cover mx-auto"></div>
                     </div>
