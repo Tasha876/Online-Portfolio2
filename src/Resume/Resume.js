@@ -63,7 +63,7 @@ const Resume = ({ isMain }) => {
                 <strong><a href={"https://novelty.herokuapp.com"} target="_blank" rel="noreferrer">Book Suggestion Application</a></strong> | <a href="https://github.com/Tasha876/NOVELty-1">Github</a>
                     <ul>
                         <li>Worked as a team to create an app that recommends novels to users based on books they have indicated to be reading or to have read as well as users’ ratings of those books.</li>
-                        <li>Clean interface completed using bootstrap.</li>
+                        <li>Clean interface completed using Bootstrap.</li>
                     </ul>
                 </article>
 
@@ -90,7 +90,8 @@ const Resume = ({ isMain }) => {
         <section>
             <article>
                 <strong>Coding Bootcamp</strong>
-                <p className="float-right">September 2020 – April 2021</p>
+                <p className="float-right">2020 – 2021</p>
+                <p>University of Toronto School of Continuing Studies, Toronto, ON</p>
                 <p>A focused 24-week program focused on gaining relevant technical programming skills.</p>
             </article>
 

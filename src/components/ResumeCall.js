@@ -7,7 +7,7 @@ const ResumeCall = () => {
             <div className="d-flex align-items-center flex-column min-vh-100">
                 <div className="row w-100 my-auto"> 
                     <div className="col-md-12 p-md-2 p-0">
-                        <div className="jumbotron call pb-2 m-0 text-center">
+                        <div className="call pb-2 m-0 text-center">
                             <h1 className="display-3 text-dark text-center">Want to know more?</h1>
                             <h2><Link to="/resume/#">Please see my resum&eacute;.</Link></h2>
                         </div>
