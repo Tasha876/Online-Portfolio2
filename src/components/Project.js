@@ -4,7 +4,7 @@ import Summary from "./Summary";
 const Project = (props) => {
 
     return (
-        <article key={props.title} id={props.title.replaceAll(" ","-")} className="p-0 d-flex container-fluid p-md-2 p-0">
+        <article key={props.title} id={props.title.replaceAll(" ","-")} className="p-0 d-flex container-fluid p-md-2 p-0 mb-4 min-vh-100 mb-md-0">
             <div className="project my-auto">
                 <h2 className="display-3 display-md-4 text-dark text-center">{props.title}.</h2>
                 <div className="row mx-2">
@@ -27,7 +27,7 @@ const Project = (props) => {
                         call={
                             function () {
                                 return (
-                                    <div className="text-center">
+                                    <div className="project-links text-center">
                                         {props.link("Project")} | {props.link("Github",props.git)} 
                                     </div>
                                 )}

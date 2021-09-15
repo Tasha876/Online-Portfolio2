@@ -14,6 +14,10 @@ import rise from "../script"
 
 const Main = (props) => {
 
+    useEffect(()=> {
+            rise()
+      },[])
+
     return (
         <main id="main_page">
             <Navbar

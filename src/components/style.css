@@ -27,8 +27,62 @@
     }
 }
 
-html {
-    font-size: clamp(0.95rem, 0.75vw + 0.6rem, 1.5rem) !important;
+/* article:before { 
+    display: block; 
+    content: ''; 
+    margin-top: 80px; 
+    height: 80px;
+    visibility: hidden; 
+    pointer-events: none;
+} */
+
+#main_page section:not(#resume):before, #main_page article#toc::before { 
+    display: block; 
+    content: ''; 
+    margin-top: 32px; 
+    height: 32px;
+    visibility: hidden; 
+    pointer-events: none;
+}
+
+#main_page .display-1 {
+    font-size: clamp(3.5rem, 12vw, 6rem) !important;
+}
+
+#main_page .display-2 {
+    font-size: clamp(3rem, 10vw, 5rem) !important;
+    word-wrap: break-all;
+    hyphens: auto;
+    /* overflow: hidden; */
+    /* width: 100%; */
+    /* white-space: pre-wrap; */
+}
+
+#main_page .display-3 {
+    font-size: clamp(2.75rem, 8vw, 4rem) !important;
+    word-wrap: break-all;
+    hyphens: auto;
+    /* overflow: hidden; */
+    /* width: 100%; */
+    /* white-space: pre-wrap; */
+}
+
+#main_page .display-4 {
+    font-size: clamp(2.25rem, 6vw, 3rem) !important;
+    word-wrap: break-all;
+    hyphens: auto;
+    /* overflow: hidden; */
+    /* width: 100%; */
+    /* white-space: pre-wrap; */
+}
+
+#home  .display-4 {
+    word-wrap: none;
+    hyphens: none;
+}
+
+#main_page p  {
+    font-size: clamp(1rem, 6vw, 1.5rem) !important;
     scroll-behavior: smooth;
 }
 
@@ -215,10 +269,11 @@ footer span {
     display: flex;
     flex-direction: row;
     overflow: hidden;
+    align-content: space-between;
 }
 
 .mobile > nav small {
-    font-size: 1rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
     padding: 0;
 }
@@ -237,6 +292,7 @@ footer span {
     display: inline;
     font-size: x-large;
     width: 25%;
+    line-height: 1rem;
 }
 
 .mobile > nav > ul > li > a {
@@ -288,6 +344,7 @@ nav * {
   display: flex !important;
   transition: all 0.25s linear;
   max-height: 0;
+  padding-inline: 1.5rem !important;
 }
 
 .sub-nav-content > li:hover{
@@ -314,12 +371,9 @@ nav * {
   float: right;
   overflow: hidden;
   width: auto;
-}
-
-.sub-nav {
-    background-color: white;
-    border-radius: 50% 50% 0 0;
-    min-width: 0;
+  background-color: white;
+  border-radius: 50% 50% 0 0;
+  min-width: 0;
 }
 
 ul.sub-nav > li {
@@ -387,6 +441,7 @@ ul.sub-nav-content > li.nav-item > a.nav-link {
     display: inline-block;
     padding: 0.5rem 0;
     margin: 0 0 -0.5rem 0;
+    line-height: 2rem;
 }
 
 .contacts > ul > li > a:hover {
@@ -474,22 +529,24 @@ p {
     flex-wrap: wrap;
     justify-content: center;
     flex-direction: row-reverse;
-    margin: 0;
+    margin: 3rem auto;
+    max-width: 1024px;
 }
 
-.skills-list > h3 {
+.skills-list > h4 {
     margin-top: -1rem;
     padding: 1rem;
     text-align: center;
     color: white;
+    white-space: nowrap;
 }
 
-.skills-list > h3:hover:before {
+.skills-list > h4:hover:before {
     background-color: hsl(147, 100%, 30%);
     border-color: ivory;
 }
 
-.skills-list > h3:before {
+.skills-list > h4:before {
     content: "";
     background: hsl(147, 61%, 50%);
     box-shadow: 0 15px hsl(147, 81%, 40%);
@@ -579,7 +636,7 @@ p a:hover, .call a:hover {
 
 .tech {
     display: block;
-    font-size: 0.8rem;
+    font-size: 0.95rem;
     text-align: center;
 }
 
@@ -599,6 +656,15 @@ p a:hover, .call a:hover {
 .tech ul > li:not(:last-child):after {
     content: " | ";
     color: #00000033;
+}
+
+.project-links {
+    margin: auto;
+    margin-top: 1rem;
+    border: 2px solid black;
+    background: hsl(34, 57%, 90%);
+    width: 14rem;
+    border-radius: 2px;
 }
 
 footer {
@@ -650,7 +716,7 @@ footer {
 }
 
 .nav-animation {
-    animation: mobile-nav 0.25s ease 0s 1 forwards;
+    animation: mobile-nav 0.25s linear 0s 1 forwards;
 }
 
 footer {
@@ -660,9 +726,11 @@ footer {
 /* small+ */
 @media (min-width: 576px) {
 
-    section, article {
-        min-height: 100vh !important;
-    }
+    /* section, article {
+        min-height: calc(100vh - 64px) !important;
+        margin-bottom: -px;
+        /* box-sizing: content-box;
+    } */
 
     footer {
         display: block !important;

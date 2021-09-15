@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import React, { useEffect, useState, useRef } from "react";
+import { BrowserRouter as Router, Route, Switch, useLocation } from "react-router-dom";
 import Main from "./components/Main";
 import Resume from "./Resume/Resume";
 import projects from "./componentFiles/projectList";
@@ -22,26 +22,32 @@ const App = () => {
 
   const [loading, setLoading] = useState(true)
 
+  const isMain = useRef(false)
+
   useEffect(()=> {
+    console.log('loading', loading, 'isMain', isMain.current)
       if (loading) {
         setTimeout(()=>{
           setLoading(false)
           document.querySelector('.loader').remove()
         },1000)
-      } else {
-        rise()
       }
   },[loading])
+
+
 
 return (
   loading? null :
     <Router basename={process.env.PUBLIC_URL}>
       <Switch>
         <Route exact path="/resume">
-          <Resume/>
+          <Resume
+            isMain={isMain}
+          />
         </Route>
         <Route path="/">
           <Main 
+            isMain={isMain}
             projects={projects}
             titles={titles}
           />

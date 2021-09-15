@@ -9,7 +9,9 @@ const style = {
     }
 };
 
-const Resume = () => {
+const Resume = ({ isMain }) => {
+
+    isMain.current = false
 
     useEffect(() => {
         $(".sun_moon").remove()

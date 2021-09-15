@@ -17,7 +17,7 @@ const Technologies = ({ technologies }) => {
         <ul>
             {techUsed.map(({ name, desc, link }) => (
                 <li key={name}>
-                    <a aria-label={desc || name } target="_blank" rel="noreferrer" href={link || null}>{ name }</a>
+                    <a aria-label={ desc || name } target="_blank" rel="noreferrer" href={ link || null }>{ name }</a>
                 </li>
             ))}
         </ul>

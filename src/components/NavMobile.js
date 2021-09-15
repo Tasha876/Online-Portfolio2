@@ -8,23 +8,26 @@ const NavMobile = () => {
     useEffect(() => {
         $(".mobile").click(() => {
             $(".mobile nav").removeClass("nav-animation")
-            $(".mobile nav").width($(".mobile nav").width())
+            // $(".mobile nav").width($(".mobile nav").width())
+            $(".mobile nav").width('100%')
             $(".mobile nav").addClass("nav-animation-appear")
         })
     })
 
     useEffect(() => {
         $(document).on('scroll', () => {
-            if ($(document).scrollTop() > 10 && hasScrolled === false) {
+            if ($(document).scrollTop() > 0 && hasScrolled === false) {
                 setHasScrolled(true)
                 $(".mobile nav").removeClass("nav-animation-appear")
-                $(".mobile nav").width($(".mobile nav").width()) // otherwise animation will only run once for whatever reason
+                $(".mobile nav").width('100%') // otherwise animation will only run once for whatever reason
+                // $(".mobile nav").width($(".mobile nav").width()) 
                 $(".mobile nav").addClass("nav-animation")
             }
-            else if ($(document).scrollTop() <= 10 && hasScrolled === true) {
+            else if ($(document).scrollTop() <= 0 && hasScrolled === true) {
                 setHasScrolled(false)
                 $(".mobile nav").removeClass("nav-animation")
-                $(".mobile nav").width($(".mobile nav").width())
+                $(".mobile nav").width('100%')
+                // $(".mobile nav").width($(".mobile nav").width())
                 $(".mobile nav").addClass("nav-animation-appear")
                 $(".mobile").off("click")
             }
