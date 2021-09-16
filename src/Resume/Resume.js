@@ -9,6 +9,8 @@ const style = {
     }
 };
 
+let historyKey = null
+
 const Resume = ({ isMain }) => {
 
     let history = useHistory()
@@ -17,7 +19,10 @@ const Resume = ({ isMain }) => {
     useEffect(() => {
         $(".sun_moon").remove()
         window.scrollTo(0, 0);
-        if (!/resume/.test(history.location.pathname)) history.push(history.location)
+        console.log("1",history.location.pathname, historyKey)
+        if (history.location.key !== historyKey)
+        historyKey = history.location.key        
+        console.log("2",history.location.pathname, historyKey)
       }, []);
     
     return (
