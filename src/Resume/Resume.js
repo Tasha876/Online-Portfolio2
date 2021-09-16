@@ -9,7 +9,7 @@ const style = {
     }
 };
 
-let historyKey = null
+let historyLocation = null
 
 const Resume = ({ isMain }) => {
 
@@ -19,10 +19,12 @@ const Resume = ({ isMain }) => {
     useEffect(() => {
         $(".sun_moon").remove()
         window.scrollTo(0, 0);
-        console.log("1",history.location.pathname, historyKey)
-        if (history.location.key !== historyKey)
-        historyKey = history.location.key        
-        console.log("2",history.location.pathname, historyKey)
+        console.log("1",history.location, historyLocation)
+        historyLocation = history.location.pathname
+        if (history.location.pathname !== historyLocation) {
+            history.push(history.location)
+        }   
+        console.log("2",history.location, historyLocation)
       }, []);
     
     return (
