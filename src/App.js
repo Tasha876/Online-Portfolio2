@@ -22,6 +22,11 @@ const App = () => {
 
   const [loading, setLoading] = useState(true)
 
+  const [historyLocation, setHistoryLocation] = useState({})
+
+  const historyLoc = useRef(false)
+
+
   const isMain = useRef(false)
 
   useEffect(()=> {
@@ -42,6 +47,9 @@ return (
         <Route exact path="/resume/">
           <Resume
             isMain={isMain}
+            historyLocation = {historyLocation}
+            setHistoryLocation = {setHistoryLocation}
+            historyLoc = {historyLoc}
           />
         </Route>
         <Route path="/">
