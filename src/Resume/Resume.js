@@ -11,7 +11,7 @@ const style = {
 
 const Resume = ({ isMain }) => {
 
-    let location = useLocation()
+    // let location = useLocation()
 
     let history = useHistory()
     isMain.current = false
@@ -19,7 +19,9 @@ const Resume = ({ isMain }) => {
     useEffect(() => {
         $(".sun_moon").remove()
         window.scrollTo(0, 0);
-        if (location.history?.pathname.test("/resume/")) history.push(history.location)
+        console.log("1",history.location.pathname)
+        if (/resume/.test(!history.location.pathname)) history.push(history.location)
+        console.log("2",history)
       }, []);
     
     return (
