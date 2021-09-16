@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import "./style.css"
 import $ from "jquery"
-import { Link, useHistory } from "react-router-dom"
+import { Link, useHistory, useLocation } from "react-router-dom"
 
 const style = {
     main: {
@@ -14,12 +14,20 @@ const Resume = ({ isMain }) => {
     let history = useHistory()
     isMain.current = false
     console.log(history.location)
+    let location = useLocation()
     // setHistoryLocation(history.location)
     // if (!historyLoc.current) historyLoc.current = history.location
 
     useEffect(() => {
         $(".sun_moon").remove()
         window.scrollTo(0, 0);
+        window.onbeforeunload = (e) => {
+            e.preventDefault()
+            // alert('hello')
+            // console.log("loc",location.pathname)
+            // history.push(history.location)
+            // return ''
+        }
         // console.log("1",history.location, historyLoc.current)
         // if (history.location.pathname === '/resume/') {
             
