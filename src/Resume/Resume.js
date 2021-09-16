@@ -9,21 +9,23 @@ const style = {
     }
 };
 
-const Resume = ({ isMain, historyLocation, setHistoryLocation, historyLoc }) => {
+const Resume = ({ isMain }) => {
 
     let history = useHistory()
     isMain.current = false
-
-    setHistoryLocation(history.location)
+    console.log(history.location)
+    // setHistoryLocation(history.location)
     // if (!historyLoc.current) historyLoc.current = history.location
 
     useEffect(() => {
         $(".sun_moon").remove()
         window.scrollTo(0, 0);
-        console.log("1",history.location, historyLoc.current)
-        if (history.location.pathname === '/resume/') history.replace(history.location) 
-        // history.push(historyLoc.current) 
-        console.log("2",history.location, historyLoc.current)
+        // console.log("1",history.location, historyLoc.current)
+        // if (history.location.pathname === '/resume/') {
+            
+        history.replace(history.location) 
+        // }
+        // console.log("2",history.location, historyLoc.current)
       }, []);
     
     return (
