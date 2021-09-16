@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import "./style.css"
 import $ from "jquery"
-import { Link } from "react-router-dom"
+import { Link, useHistory } from "react-router-dom"
 
 const style = {
     main: {
@@ -11,9 +11,12 @@ const style = {
 
 const Resume = ({ isMain }) => {
 
+    let history = useHistory()
+
     isMain.current = false
 
     useEffect(() => {
+        history.push('/resume')
         $(".sun_moon").remove()
     },[])
 

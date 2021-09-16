@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "react-router-dom"
 
 const ResumeCall = () => {
+
     return (
         <section id="resume" className="container-fluid d-flex align-items-center flex-column p-md-2 p-0">
             <div className="d-flex align-items-center flex-column min-vh-100">
