@@ -17,7 +17,7 @@ const ResumeCall = () => {
                             <h2><Link 
                                 onClick={() => {
                                     console.log(history.location)
-                                    if (history.location.pathname == '/resume/') history.replace('/resume/') 
+                                    if (history.location.pathname !== '/') history.replace('/resume/') 
                                 }} 
                                 to="/resume/">Please see my resum&eacute;.</Link></h2>
                         </div>

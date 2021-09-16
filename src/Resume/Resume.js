@@ -23,7 +23,7 @@ const Resume = ({ isMain }) => {
         // console.log("1",history.location, historyLoc.current)
         // if (history.location.pathname === '/resume/') {
             
-        history.replace(history.location) 
+        // history.replace(history.location) 
         // }
         // console.log("2",history.location, historyLoc.current)
       }, []);
