@@ -19,7 +19,7 @@ const Resume = ({ isMain }) => {
     useEffect(() => {
         $(".sun_moon").remove()
         window.scrollTo(0, 0);
-        if (location.history?.pathname.test(/\/resume\/?/g)) history.push(history.location)
+        if (location.history?.pathname.test("/resume/")) history.push(history.location)
       }, []);
     
     return (

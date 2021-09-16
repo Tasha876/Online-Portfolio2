@@ -39,7 +39,7 @@ return (
   loading? null :
     <Router basename={process.env.PUBLIC_URL}>
       <Switch>
-        <Route exact path="/resume">
+        <Route exact path="/resume/">
           <Resume
             isMain={isMain}
           />
