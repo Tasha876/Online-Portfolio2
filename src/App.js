@@ -25,11 +25,10 @@ const App = () => {
   const isMain = useRef(false)
 
   useEffect(()=> {
-    console.log('loading', loading, 'isMain', isMain.current)
       if (loading) {
         setTimeout(()=>{
           setLoading(false)
-          document.querySelector('.loader').remove()
+          document.querySelector('.loader')?.remove()
         },1000)
       }
   },[loading])

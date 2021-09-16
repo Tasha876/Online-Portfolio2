@@ -12,7 +12,13 @@ const NavMobile = () => {
             $(".mobile nav").width('100%')
             $(".mobile nav").addClass("nav-animation-appear")
         })
-    })
+
+        return () => {
+            $(".mobile nav").off()
+            setHasScrolled(null)
+        }
+
+    },[])
 
     useEffect(() => {
         $(document).on('scroll', () => {
@@ -32,6 +38,12 @@ const NavMobile = () => {
                 $(".mobile").off("click")
             }
         })
+
+        return () => {
+            $(".mobile nav").off()
+            setHasScrolled(null)
+        }
+
     },[hasScrolled])
 
     return (

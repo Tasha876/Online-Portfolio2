@@ -4,6 +4,10 @@
     font-family: 'Source Code Pro', monospace;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 @keyframes rise {
     from {top: 10vh;}
     to {top: 100vh;}
@@ -83,7 +87,6 @@
 
 #main_page p  {
     font-size: clamp(1rem, 6vw, 1.5rem) !important;
-    scroll-behavior: smooth;
 }
 
 section {
