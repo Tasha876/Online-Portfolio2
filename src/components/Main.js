@@ -11,11 +11,16 @@ import Contacts from "./Contacts";
 import Skills from "./Skills";
 import './style.css'
 import rise from "../script"
+import { useHistory } from "react-router-dom"
 
 const Main = (props) => {
 
+    let history = useHistory()
+
     useEffect(()=> {
             rise()
+            console.log(history.location)
+            props.historyItem.current = history.location.pathname
       },[])
 
     return (

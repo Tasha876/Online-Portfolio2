@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, useHistory } from "react-router-dom";
 import Main from "./components/Main";
 import Resume from "./Resume/Resume";
 import projects from "./componentFiles/projectList";
@@ -22,11 +22,11 @@ const App = () => {
 
   const [loading, setLoading] = useState(true)
 
-  const [historyLocation, setHistoryLocation] = useState({})
+  // let history = useHistory()
 
-  const historyLoc = useRef(false)
+  // const [historyLocation, setHistoryLocation] = useState({})
 
-
+  const historyItem = useRef('/resume/')
   const isMain = useRef(false)
 
   useEffect(()=> {
@@ -48,9 +48,7 @@ return (
         <Route exact path="/resume/">
           <Resume
             isMain={isMain}
-            historyLocation = {historyLocation}
-            setHistoryLocation = {setHistoryLocation}
-            historyLoc = {historyLoc}
+            historyItem = {historyItem}
           />
         </Route>
         <Route path="/">
@@ -58,6 +56,7 @@ return (
             isMain={isMain}
             projects={projects}
             titles={titles}
+            historyItem = {historyItem}
           />
         </Route>
       </Switch>
