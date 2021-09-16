@@ -15,10 +15,10 @@ const ResumeCall = () => {
                         <div className="call pb-2 m-0 text-center">
                             <h1 className="display-3 text-dark text-center">Want to know more?</h1>
                             <h2><Link 
-                                // onClick={() => {
-                                //     console.log(history.location)
-                                //     if (history.location.pathname !== '/') history.replace('/resume/') 
-                                // }} 
+                                onClick={() => {
+                                    // console.log(history.location)
+                                    history.replace(history.location) 
+                                }} 
                                 to="/resume/">Please see my resum&eacute;.</Link></h2>
                         </div>
                     </div>

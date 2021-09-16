@@ -21,19 +21,6 @@ const Resume = ({ isMain }) => {
     useEffect(() => {
         $(".sun_moon").remove()
         window.scrollTo(0, 0);
-        window.onbeforeunload = (e) => {
-            e.preventDefault()
-            // alert('hello')
-            // console.log("loc",location.pathname)
-            // history.push(history.location)
-            // return ''
-        }
-        // console.log("1",history.location, historyLoc.current)
-        // if (history.location.pathname === '/resume/') {
-            
-        // history.replace(history.location) 
-        // }
-        // console.log("2",history.location, historyLoc.current)
       }, []);
     
     return (
