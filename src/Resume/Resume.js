@@ -9,25 +9,13 @@ const style = {
     }
 };
 
-const Resume = ({ isMain, historyItem }) => {
-
-    let history = useHistory()
+const Resume = ({ isMain }) => {
 
     isMain.current = false
-    // console.log(history.location)
-    // let location = useLocation()
-    // setHistoryLocation(history.location)
-    // if (!historyLoc.current) historyLoc.current = history.location
 
     useEffect(() => {
         $(".sun_moon").remove()
         window.scrollTo(0, 0);
-        // if (history.location.pathname !== historyItem) {
-            // console.log('here', history.location)
-            // history.push(history.location)
-            // historyItem.current = history.location.pathname
-            // historyAdded.current = true
-        // }
       }, []);
     
     return (
@@ -100,15 +88,15 @@ const Resume = ({ isMain, historyItem }) => {
             <article>
                 <strong>Coding Bootcamp</strong>
                 <p className="float-right">2020 – 2021</p>
-                <p>University of Toronto School of Continuing Studies, Toronto, ON</p>
-                <p>A focused 24-week program focused on gaining relevant technical programming skills.</p>
+                <p>University of Toronto School of Continuing Studies, Toronto, ON.
+                <br/>A focused 24-week program focused on gaining relevant technical programming skills.</p>
             </article>
 
 
             <article>
                 <strong>Bachelor of Math</strong>
                 <p className="float-right">	2015 – 2020</p>
-                <p>University of Waterloo, Waterloo, ON</p>
+                <p>University of Waterloo, Waterloo, ON.</p>
             </article>
 
         </section>
@@ -121,7 +109,7 @@ const Resume = ({ isMain, historyItem }) => {
             <article>
                 <strong>Data Entry Clerk</strong>
                     <p className="float-right">2014 – present</p>
-                    <p>Nordia, Waterloo, ON</p>
+                    <p>Nordia, Waterloo, ON.</p>
 
                     <strong id="accomplishments">Selected Accomplishments:</strong>
                     <section>

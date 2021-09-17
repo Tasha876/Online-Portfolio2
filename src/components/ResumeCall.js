@@ -17,7 +17,6 @@ const ResumeCall = () => {
                             <h2>
                                 <a className="text-primary"
                                 onClick={() => {
-                                    console.log(history.location)
                                     history.push('/resume') 
                                 }} 
                                 >
