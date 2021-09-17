@@ -22,12 +22,12 @@ const Resume = ({ isMain, historyItem }) => {
     useEffect(() => {
         $(".sun_moon").remove()
         window.scrollTo(0, 0);
-        if (history.location.pathname !== historyItem) {
-            console.log('here', history.location)
-            history.push(history.location)
-            historyItem.current = history.location.pathname
+        // if (history.location.pathname !== historyItem) {
+            // console.log('here', history.location)
+            // history.push(history.location)
+            // historyItem.current = history.location.pathname
             // historyAdded.current = true
-        }
+        // }
       }, []);
     
     return (

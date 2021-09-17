@@ -42,7 +42,7 @@ const App = () => {
 
 return (
   loading? null :
-    <Router basename={'/'}>
+    <Router basename={'.'}>
       {console.log(process.env.PUBLIC_URL)}
       <Switch>
         <Route exact path="/resume/">
