@@ -26,7 +26,7 @@ Screenshot of the webpage.
 
 <a name="deployed"></a>
 ## 3. Deployed Webpage
-[The deployed site](https://tasha876.github.io/Online-Portfolio2), hosted by GitHub Pages.
+[The deployed site](https://online-portfolio-tasha876.vercel.app/), hosted by Vercel.
 
 <a name="support"></a>
 ## 4. Support

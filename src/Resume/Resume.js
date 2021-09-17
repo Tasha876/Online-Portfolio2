@@ -37,7 +37,7 @@ const Resume = ({ isMain }) => {
         Waterloo ON<br/>
         {/* 519-555-5555  */}
         <a href={"mailto:natasha.fray9@gmail.com"}>natasha.fray9@gmail.com</a><br/>
-        <a href="https://www.linkedin.com/in/natasha-fray/" target="_blank" rel="noreferrer">LinkedIn</a> | <a href="https://github.com/Tasha876" target="_blank" rel="noreferrer">GitHub</a> | <a href="https://tasha876.github.io/Online-Portfolio2/" target="_blank" rel="noreferrer">Portfolio</a></p>
+        <a href="https://www.linkedin.com/in/natasha-fray/" target="_blank" rel="noreferrer">LinkedIn</a> | <a href="https://github.com/Tasha876" target="_blank" rel="noreferrer">GitHub</a> | <a href="https://online-portfolio-tasha876.vercel.app/" target="_blank" rel="noreferrer">Portfolio</a></p>
 
         </header>
         <h2 id="profile" className="display-4" >PROFILE:</h2>
@@ -59,7 +59,7 @@ const Resume = ({ isMain }) => {
             <article>
                 <strong><a href={"https://novelty.herokuapp.com"} target="_blank" rel="noreferrer">Book Suggestion Application</a></strong> | <a href="https://github.com/Tasha876/NOVELty-1">Github</a>
                     <ul>
-                        <li>Worked as a team to create an app that recommends novels to users based on books they have indicated to be reading or to have read as well as users’ ratings of those books.</li>
+                        <li>Worked as a team to create an app that recommends novels to users based on books they have indicated to be reading or to have read as well as users’ ratings of these books.</li>
                         <li>Clean interface completed using Bootstrap.</li>
                     </ul>
                 </article>
@@ -111,24 +111,24 @@ const Resume = ({ isMain }) => {
                     <p className="float-right">2014 – present</p>
                     <p>Nordia, Waterloo, ON.</p>
 
-                    <strong id="accomplishments">Selected Accomplishments:</strong>
+                    <strong id="accomplishments">Duties and Selected Accomplishments:</strong>
                     <section>
-                        <article>
-                            <ul>
-                                <li>Created a JavaScript based “call flow” for other employees and myself to make it easier to provide the correct pricing information to customers.</li>
-                                <li>Served as a “weekend prime” in case of an emergency while working weekends during university.</li>
-                                <li>Consistently scores in the top quartiles.</li>
-                            </ul>
-                        </article>
-                    </section>
+                        {/* <article> */}
+                        <ul>
+                            <li>Created a JavaScript based “call flow” for other employees and myself to make it easier to provide the correct pricing information to customers.</li>
+                            <li>Served as a “weekend prime” in case of an emergency while working weekends during university.</li>
+                            <li>Consistently scores in the top quartiles.</li>
+                            {/* </ul> */}
+                        {/* </article>
                     <strong id="accomplishments">Duties:</strong>
-                    <ul>
-                        <li>Provide service to customers remotely. </li>
-                        <li>Process orders for Bell representatives selling Bell products and new Bell Customers. </li>
-                        <li>Answer questions for Bell representatives. </li>
-                        <li>Problem solve to ensure that customers can get service in rural areas. </li>
-                        <li>Quickly learn new promotions and codes.</li>
-                    </ul>
+                        <ul> */}
+                            <li>Provide service to customers remotely. </li>
+                            {/* <li>Process orders for Bell representatives selling Bell products and new Bell Customers. </li>
+                            <li>Answer questions for Bell representatives. </li> */}
+                            <li>Problem solve to ensure that customers can get service in rural areas. </li>
+                            {/* <li>Quickly learn new promotions and codes.</li> */}
+                        </ul>
+                    </section>
             </article>
 
         </section>
