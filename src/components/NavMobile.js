@@ -14,7 +14,6 @@ const NavMobile = () => {
         })
 
         return () => {
-            $(".mobile nav").off()
             setHasScrolled(null)
         }
 
