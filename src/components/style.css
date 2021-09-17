@@ -192,6 +192,10 @@ section {
     border: 3px solid #00000088;
     background-color: #ffffff33;
     shape-outside: circle(50%);
+    max-width: 700px;
+    max-height: 700px;
+    margin: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .me {
