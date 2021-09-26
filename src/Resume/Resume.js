@@ -23,11 +23,11 @@ const Resume = ({ isMain }) => {
         <nav className="navbar nav bg-light text-light">
                 <ul>
                     <li className="lead"><Link to={"../NFray_Resume.pdf"} target="_blank" download>Download PDF</Link></li>
-                    <li><a href="#profile">Profile</a></li>
-                    <li><a href="#tech">Technical Skills</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#experience">Experience</a></li>
+                    <li className="d-none d-md-inline"><a href="#profile">Profile</a></li>
+                    <li className="d-none d-md-inline"><a href="#tech">Technical Skills</a></li>
+                    <li className="d-none d-md-inline"><a href="#education">Education</a></li>
+                    <li className="d-none d-md-inline"><a href="#projects">Projects</a></li>
+                    <li className="d-none d-md-inline"><a href="#experience">Experience</a></li>
                 </ul>
             </nav>
         <main className="container h-100" style={style.main}>
