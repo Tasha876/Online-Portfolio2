@@ -34,7 +34,7 @@ Should you find an issue with this webpage, please create a [new issue](https://
 
 <a name="next_steps"></a>
 ## 5. Next steps
-- Get link to resume to work.
+- ~~Get link to resume to work.~~
 - Maybe implement a sort of slideshow for my projects to take more advantage of reacts features
 
 <a name="acknowledge"></a>

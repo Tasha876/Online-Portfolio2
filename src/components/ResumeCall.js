@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, useHistory } from "react-router-dom"
+import $ from "jquery"
 
 const ResumeCall = () => {
 
@@ -17,6 +18,7 @@ const ResumeCall = () => {
                             <h2>
                                 <a className="text-primary"
                                 onClick={() => {
+                                    $('html').css('scrollBehavior', 'auto')
                                     history.push('/resume') 
                                 }} 
                                 >

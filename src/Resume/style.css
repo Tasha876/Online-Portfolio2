@@ -1,3 +1,7 @@
+:root {
+    height: 100%;
+}
+
 #resume_page {
     position: relative;
     top: 50px;

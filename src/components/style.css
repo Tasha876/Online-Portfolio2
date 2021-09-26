@@ -2,9 +2,10 @@
 
 #root {
     font-family: 'Source Code Pro', monospace;
+    --num-projects: 6;
 }
 
-html {
+:root {
     scroll-behavior: smooth;
 }
 
@@ -31,14 +32,10 @@ html {
     }
 }
 
-/* article:before { 
-    display: block; 
-    content: ''; 
-    margin-top: 80px; 
-    height: 80px;
-    visibility: hidden; 
-    pointer-events: none;
-} */
+#portfolio article, #about_me > div {
+    width: 90%;
+    max-width: 1200px;
+}
 
 #main_page section:not(#resume):before, #main_page article#toc::before { 
     display: block; 
@@ -57,32 +54,31 @@ html {
     font-size: clamp(3rem, 10vw, 5rem) !important;
     word-wrap: break-all;
     hyphens: auto;
-    /* overflow: hidden; */
-    /* width: 100%; */
-    /* white-space: pre-wrap; */
 }
 
 #main_page .display-3 {
     font-size: clamp(2.75rem, 8vw, 4rem) !important;
     word-wrap: break-all;
     hyphens: auto;
-    /* overflow: hidden; */
-    /* width: 100%; */
-    /* white-space: pre-wrap; */
 }
 
 #main_page .display-4 {
     font-size: clamp(2.25rem, 6vw, 3rem) !important;
     word-wrap: break-all;
     hyphens: auto;
-    /* overflow: hidden; */
-    /* width: 100%; */
-    /* white-space: pre-wrap; */
 }
 
 #home  .display-4 {
     word-wrap: none;
     hyphens: none;
+}
+
+/* #portfolio {
+    background: linear-gradient(lightBlue 0%, hsl(200, 82%, 45%), hsl(200, 68%, 75%), hsl(200, 71%, 95%) 90%, lightBlue 95%);
+} */
+
+#resume {
+    background: hsl(197, 71%, 20%)
 }
 
 #main_page p  {
@@ -174,14 +170,17 @@ section {
 }
 
 .sun_moon > svg > circle {
-    /* fill: gold; */
-    fill: transparent
+    fill: gold;
 }
 
-#about_me  {
+#about_me, #skills, #portfolio  {
     background-image: linear-gradient(lightBlue 0%, lightblue 30%, skyBlue 30%, skyBlue 75%, #42a7d6 75%, #42a7d6 100%);
 }
 
+#portfolio {
+    background-repeat: repeat-y;
+    background-size: auto calc(100% / var(--num-projects))
+}
 
 .me img {
     z-index: 4;
@@ -190,12 +189,10 @@ section {
     height: 100%;
     border-radius: 50%;
     border: 3px solid #00000088;
-    background-color: #ffffff33;
+    background-color: #ffffff88;
     shape-outside: circle(50%);
-    max-width: 700px;
-    max-height: 700px;
-    margin: 50%;
-    transform: translate(-50%, -50%);
+    inset: 0;
+    margin: auto;
 }
 
 .me {
@@ -208,9 +205,9 @@ section {
     margin-bottom: 2rem;
 }
 
-#portfolio {
-    background: #ffffffcc;
-}
+/* #portfolio {
+    background: skyblue;
+} */
 
 #portfolio article {
     position: relative;
@@ -259,16 +256,12 @@ footer span {
     background-color: transparent;
 } 
 
-.mobile {
+#main_page .mobile {
     min-height: 30px;
     height: auto;
 }
 
-.nav-animation-appear {
-    animation: mobile-nav 0.25s linear 0s 1 reverse backwards;
-}
-
-.mobile > nav {
+#main_page .mobile > nav {
     position: absolute;
     bottom: 0;
     min-height: auto;  
@@ -279,13 +272,13 @@ footer span {
     align-content: space-between;
 }
 
-.mobile > nav small {
+#main_page .mobile > nav small {
     font-size: 0.75rem;
     text-transform: uppercase;
     padding: 0;
 }
 
-.mobile > nav > ul {
+#main_page .mobile > nav > ul {
     background: white;
     mix-blend-mode: screen;
     border-radius: 0.5rem 0.5rem 0 0;
@@ -295,18 +288,18 @@ footer span {
     justify-content: space-evenly;
 }
 
-.mobile > nav  > ul > li {
+#main_page .mobile > nav  > ul > li {
     display: inline;
     font-size: x-large;
     width: 25%;
     line-height: 1rem;
 }
 
-.mobile > nav > ul > li > a {
+#main_page .mobile > nav > ul > li > a {
     color: #888;
 }
 
-.mobile > nav > ul > li > a:hover{
+#main_page .mobile > nav > ul > li > a:hover{
     color: black;
     text-decoration: none;
 }
@@ -538,10 +531,12 @@ p {
     flex-direction: row-reverse;
     margin: 3rem auto;
     max-width: 1024px;
+    min-width:  80%;
 }
 
 .skills-list > h4 {
     margin-top: -1rem;
+    margin-inline: -1px;
     padding: 1rem;
     text-align: center;
     color: white;
@@ -718,8 +713,13 @@ footer {
 
 }
 
-.mobile > nav  {
+#main_page .mobile > nav  {
     display: flex;
+}
+
+
+.nav-animation-appear {
+    animation: mobile-nav 0.25s linear 0s 1 reverse backwards;
 }
 
 .nav-animation {
@@ -743,7 +743,7 @@ footer {
         display: block !important;
     }
 
-    .mobile > nav {
+    #main_page .mobile > nav {
         display: none;
     }
 }

@@ -1,53 +1,60 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState, useRef } from "react"
 import $ from "jquery"
 
 const NavMobile = () => {
 
     const [hasScrolled, setHasScrolled] = useState(false)
 
-    useEffect(() => {
-        $(".mobile").click(() => {
-            $(".mobile nav").removeClass("nav-animation")
-            // $(".mobile nav").width($(".mobile nav").width())
-            $(".mobile nav").width('100%')
-            $(".mobile nav").addClass("nav-animation-appear")
-        })
+    const [hasClicked, setHasClicked] = useState(false)
 
-        return () => {
-            setHasScrolled(null)
+    const mobile_nav = useRef(null)
+
+    useEffect(() => {
+
+        if (hasClicked) {
+            $(mobile_nav.current)
+                .removeClass("nav-animation")
+                .width('100%')
+                .addClass("nav-animation-appear")
         }
 
-    },[])
+        return () => {
+            setHasClicked(false)
+        }
+
+    },[hasClicked])
 
     useEffect(() => {
+
         $(document).on('scroll', () => {
-            if ($(document).scrollTop() > 0 && hasScrolled === false) {
+            if ($(document).scrollTop() > 0) {
                 setHasScrolled(true)
-                $(".mobile nav").removeClass("nav-animation-appear")
-                $(".mobile nav").width('100%') // otherwise animation will only run once for whatever reason
-                // $(".mobile nav").width($(".mobile nav").width()) 
-                $(".mobile nav").addClass("nav-animation")
+                $(mobile_nav.current)
+                    .removeClass("nav-animation-appear")
+                    .width('100%') // otherwise animation will only run once for whatever reason
+                    .addClass("nav-animation")
             }
-            else if ($(document).scrollTop() <= 0 && hasScrolled === true) {
+            else {
                 setHasScrolled(false)
-                $(".mobile nav").removeClass("nav-animation")
-                $(".mobile nav").width('100%')
-                // $(".mobile nav").width($(".mobile nav").width())
-                $(".mobile nav").addClass("nav-animation-appear")
+                $(mobile_nav.current)
+                    .removeClass("nav-animation")
+                    .width('100%')
+                    .addClass("nav-animation-appear")
                 $(".mobile").off("click")
             }
         })
 
         return () => {
-            $(".mobile nav").off()
+            $(mobile_nav.current).removeClass("nav-animation-appear")
+            $(mobile_nav.current).removeClass("nav-animation")
             setHasScrolled(null)
         }
 
     },[hasScrolled])
 
     return (
-        <div className="mobile fixed-bottom m-0 p-0">
-        <nav className="mb-auto p-0">
+        <div className="mobile fixed-bottom m-0 p-0" onClick={()=>setHasClicked(true)}>
+        <nav ref = {mobile_nav} className="mb-auto p-0">
             <ul className="m-0 p-2">
                 <li className="text-center"><a href="#home"><i title="home" className="fas fa-home"></i><br/><small>home</small></a></li>
                 <li className="text-center"><a href="#about_me"><i title="about me" className="far fa-comment"></i><br/><small>about</small></a></li>

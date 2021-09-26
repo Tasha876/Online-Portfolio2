@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react"
 import "./style.css"
 import $ from "jquery"
-import { Link, useHistory } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 const style = {
     main: {
@@ -35,7 +35,6 @@ const Resume = ({ isMain }) => {
             <h1 className="display-3 text-center">Natasha Fray</h1>
         <p className="text-center">
         Waterloo ON<br/>
-        {/* 519-555-5555  */}
         <a href={"mailto:natasha.fray9@gmail.com"}>natasha.fray9@gmail.com</a><br/>
         <a href="https://www.linkedin.com/in/natasha-fray/" target="_blank" rel="noreferrer">LinkedIn</a> | <a href="https://github.com/Tasha876" target="_blank" rel="noreferrer">GitHub</a> | <a href="https://online-portfolio-tasha876.vercel.app/" target="_blank" rel="noreferrer">Portfolio</a></p>
 
@@ -94,7 +93,7 @@ const Resume = ({ isMain }) => {
 
 
             <article>
-                <strong>Bachelor of Math</strong>
+                <strong>Bachelor of Mathematics</strong>
                 <p className="float-right">	2015 – 2020</p>
                 <p>University of Waterloo, Waterloo, ON.</p>
             </article>
@@ -113,20 +112,12 @@ const Resume = ({ isMain }) => {
 
                     <strong id="accomplishments">Duties and Selected Accomplishments:</strong>
                     <section>
-                        {/* <article> */}
                         <ul>
                             <li>Created a JavaScript based “call flow” for other employees and myself to make it easier to provide the correct pricing information to customers.</li>
                             <li>Served as a “weekend prime” in case of an emergency while working weekends during university.</li>
                             <li>Consistently scores in the top quartiles.</li>
-                            {/* </ul> */}
-                        {/* </article>
-                    <strong id="accomplishments">Duties:</strong>
-                        <ul> */}
                             <li>Provide service to customers remotely. </li>
-                            {/* <li>Process orders for Bell representatives selling Bell products and new Bell Customers. </li>
-                            <li>Answer questions for Bell representatives. </li> */}
                             <li>Problem solve to ensure that customers can get service in rural areas. </li>
-                            {/* <li>Quickly learn new promotions and codes.</li> */}
                         </ul>
                     </section>
             </article>
