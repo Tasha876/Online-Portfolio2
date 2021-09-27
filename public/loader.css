@@ -1,8 +1,4 @@
 @keyframes loading-animation {
-    from {
-        background: skyblue;
-        opacity: 1;
-    }
     to {
         opacity: 0;
     }

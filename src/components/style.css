@@ -176,7 +176,7 @@ section {
 
 #portfolio {
     background-repeat: repeat-y;
-    background-size: auto calc(100% / var(--num-projects))
+    background-size: 100% calc(100% / var(--num-projects))
 }
 
 .me img {
