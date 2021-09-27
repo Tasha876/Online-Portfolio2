@@ -73,12 +73,8 @@
     hyphens: none;
 }
 
-/* #portfolio {
-    background: linear-gradient(lightBlue 0%, hsl(200, 82%, 45%), hsl(200, 68%, 75%), hsl(200, 71%, 95%) 90%, lightBlue 95%);
-} */
-
 #resume {
-    background: hsl(197, 71%, 20%)
+    background: hsl(197, 71%, 70%)
 }
 
 #main_page p  {
@@ -175,6 +171,8 @@ section {
 
 #about_me, #skills, #portfolio  {
     background-image: linear-gradient(lightBlue 0%, lightblue 30%, skyBlue 30%, skyBlue 75%, #42a7d6 75%, #42a7d6 100%);
+    background-color: rgba(255, 255, 255, 0.5);
+    background-blend-mode: overlay;
 }
 
 #portfolio {
@@ -205,12 +203,12 @@ section {
     margin-bottom: 2rem;
 }
 
-/* #portfolio {
-    background: skyblue;
-} */
-
 #portfolio article {
     position: relative;
+}
+
+#skills {
+    min-height: 100vh;
 }
 
 section > *, article > * {
@@ -329,7 +327,6 @@ nav * {
 }
 
 .sub-nav-content {
-  /* opacity: 0; */
   overflow: hidden;
   position: absolute;
   right: 1rem;
@@ -383,7 +380,6 @@ ul.sub-nav > li {
 
 .sub-nav:hover .sub-nav-content {
     max-height: 999px;
-    /* opacity: 1; */
 }
 
 ul.sub-nav-content > li.nav-item > a.nav-link {
@@ -532,6 +528,7 @@ p {
     margin: 3rem auto;
     max-width: 1024px;
     min-width:  80%;
+    align-items: stretch;
 }
 
 .skills-list > h4 {
@@ -543,22 +540,18 @@ p {
     white-space: nowrap;
 }
 
-.skills-list > h4:hover:before {
+.skills-list > h4:hover {
     background-color: hsl(147, 100%, 30%);
     border-color: ivory;
 }
 
-.skills-list > h4:before {
-    content: "";
+.skills-list > h4 {
     background: hsl(147, 61%, 50%);
     box-shadow: 0 15px hsl(147, 81%, 40%);
     border-radius: 50% 50% 1rem 1rem;
     position: absolute;
     display: block;
-    width: 100%;
-    height: 4rem;
     z-index: -200;
-    transform: translate(-1rem, -1rem);
 }
 
 p a {
@@ -732,12 +725,6 @@ footer {
 
 /* small+ */
 @media (min-width: 576px) {
-
-    /* section, article {
-        min-height: calc(100vh - 64px) !important;
-        margin-bottom: -px;
-        /* box-sizing: content-box;
-    } */
 
     footer {
         display: block !important;

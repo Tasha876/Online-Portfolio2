@@ -10,7 +10,7 @@ const Skills = () => {
                         <h2 className="display-3 text-dark text-center">Here's what I know.</h2> 
                         <div className="skills-list text-center">
                             { technologies.filter(({ skill }) => skill).map(({ name, desc, link }) => (
-                                <h4 key={name} title={desc} className="d-inline">{name}</h4>
+                                <h4 key={name} aria-label={desc} className="d-inline">{name}</h4>
                             ))
                             }
                         </div>
