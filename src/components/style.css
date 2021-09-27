@@ -33,7 +33,6 @@
 }
 
 #portfolio article, #about_me > div {
-    width: 90%;
     max-width: 1200px;
 }
 
@@ -526,8 +525,8 @@ p {
     justify-content: center;
     flex-direction: row-reverse;
     margin: 3rem auto;
-    max-width: 1024px;
-    min-width:  80%;
+    width: 1024px;
+    max-width: 80%;
     align-items: stretch;
 }
 
@@ -551,7 +550,6 @@ p {
     border-radius: 50% 50% 1rem 1rem;
     position: absolute;
     display: block;
-    z-index: -200;
 }
 
 p a {
