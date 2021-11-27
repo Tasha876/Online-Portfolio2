@@ -121,6 +121,7 @@ section {
     margin: auto;
     height: auto !important;
     position: relative;
+    background: white;
 }
 
 .cover {
@@ -142,7 +143,7 @@ section {
   left: 1%;
   box-shadow: 0 10px 30px;
   width:98%;
-  height: 20px;
+  height: 2.5vmin;
   background-image: linear-gradient(0deg,#585858 0%, #707070 25%, #c0c0c0 100%);
   transform: perspective(10px) rotateX(-1deg);
   border-radius: 0 0 0.5rem 0.5rem;
