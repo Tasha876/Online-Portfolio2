@@ -28,10 +28,16 @@ const rise = () => {
             return response.json()
         })
         .then(function(data) {
-            let sunrise = moment.utc(data.results.sunrise).valueOf();
-            let sunset = moment.utc(data.results.sunset).valueOf();
-        (sunrise < moment.now() && moment.now() < sunset)? circle.style.fill = "gold" : circle.style.fill = "lightSteelBlue";
-        return data;
+            const sunrise = moment.utc(data.results.sunrise).valueOf();
+            const sunset = moment.utc(data.results.sunset).valueOf();
+            (sunrise < moment.now() && moment.now() < sunset)? circle.style.fill = "gold" : circle.style.fill = "lightSteelBlue";
+            return data;
+        })
+        .catch(function (){
+            const time = new Date();
+            const default_sunrise = 6
+            const default_sunset = 18
+            default_sunrise <= time.getHours() && time.getHours() <= default_sunset? circle.style.fill = "gold" : circle.style.fill = "lightSteelBlue";
         })
 
 

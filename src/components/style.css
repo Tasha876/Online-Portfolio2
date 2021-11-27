@@ -150,8 +150,11 @@ section {
 
 .sun_moon {
     mix-blend-mode: screen;
-    position: relative;
+    position: absolute;
     z-index: 1;
+    height: 100vh;
+    width: 100vw;
+    will-change: opacity;
 }
 
 .sun_moon svg {
@@ -165,13 +168,17 @@ section {
 }
 
 .sun_moon > svg > circle {
-    fill: gold;
+    fill: transparent;
+    z-index: -1;
 }
 
 #about_me, #skills, #portfolio  {
     background-image: linear-gradient(lightBlue 0%, lightblue 30%, skyBlue 30%, skyBlue 75%, #42a7d6 75%, #42a7d6 100%);
-    background-color: rgba(255, 255, 255, 0.5);
-    background-blend-mode: overlay;
+}
+
+#skills *, #resume * , #portfolio *, #about_me *, #toc * {
+    z-index: 2;
+    will-change: opacity;
 }
 
 #portfolio {
@@ -277,7 +284,6 @@ footer span {
 
 #main_page .mobile > nav > ul {
     background: white;
-    mix-blend-mode: screen;
     border-radius: 0.5rem 0.5rem 0 0;
     border: 1px solid #333;
     width: 100%;
@@ -372,13 +378,17 @@ nav * {
   min-width: 0;
 }
 
+.sub-nav:hover {
+    overflow: unset !important;
+}
+
 ul.sub-nav > li {
   left: 10px !important;
   display: inline;
 }
 
 .sub-nav:hover .sub-nav-content {
-    max-height: 999px;
+    max-height: 200%;
 }
 
 ul.sub-nav-content > li.nav-item > a.nav-link {

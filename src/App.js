@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Main from "./components/Main";
 import Resume from "./Resume/Resume";
 import projects from "./componentFiles/projectList";
-import rise from "./script"
+import { images } from './files_to_write'
 
 String.prototype.toTitleCase = function() {
   // according to http://www.superheronation.com/2011/08/16/words-that-should-not-be-capitalized-in-titles/ & https://www.grammarcheck.net/capitalization-in-titles-101/
@@ -19,6 +19,12 @@ String.prototype.toTitleCase = function() {
 const titles = projects.map(project => project.title)
 
 const App = () => {
+
+  useEffect(() => {
+    images.map(image=> {
+      <img src={image} style='display:none'/>
+    })
+  },[])
 
   const [loading, setLoading] = useState(true)
   const isMain = useRef(false)

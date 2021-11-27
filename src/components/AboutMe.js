@@ -11,7 +11,7 @@ const AboutMe = () => {
                         <div className="row w-100 m-0"> 
                         <div className="col-sm-6 order-1 order-lg-2 d-flex mx-auto">
                                 <div className="me my-auto" >
-                                        <img className="img-fluid" src={process.env.PUBLIC_URL + "/assets/images/me.png"} alt="me"/>
+                                    <img className="img-fluid" key={'me'} src={process.env.PUBLIC_URL + "/assets/images/me.png"} alt="me"/>
                                 </div>
                             </div>
                             <div className="col-lg-6 my-auto order-2 order-lg-1">

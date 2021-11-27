@@ -47,7 +47,6 @@ const NavMobile = () => {
         return () => {
             $(mobile_nav.current).removeClass("nav-animation-appear")
             $(mobile_nav.current).removeClass("nav-animation")
-            // setHasScrolled(null)
         }
 
     },[hasScrolled])
