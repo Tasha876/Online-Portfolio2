@@ -4,7 +4,6 @@ const rise = () => {
 
     moment().format();
 
-    let loaded = false;
     const main = document.querySelector("#root:not(.resume)");
     const sunDiv = document.createElement("div");
     sunDiv.classList.add("sun_moon", "sun_moonrise");

@@ -4,6 +4,7 @@ import Main from "./components/Main";
 import Resume from "./Resume/Resume";
 import projects from "./componentFiles/projectList";
 import { images } from './files_to_write'
+// import rise from "./script"
 
 String.prototype.toTitleCase = function() {
   // according to http://www.superheronation.com/2011/08/16/words-that-should-not-be-capitalized-in-titles/ & https://www.grammarcheck.net/capitalization-in-titles-101/
@@ -20,9 +21,12 @@ const titles = projects.map(project => project.title)
 
 const App = () => {
 
+  // preloads images
   useEffect(() => {
     images.map(image=> {
-      <img src={image} style='display:none'/>
+      const img = document.createElement('img')
+      img.src = `${process.env.PUBLIC_URL}/assets/images/${image}`
+      img.style=`display:'none'`
     })
   },[])
 

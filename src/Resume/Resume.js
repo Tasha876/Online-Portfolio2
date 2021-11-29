@@ -86,7 +86,7 @@ const Resume = ({ isMain }) => {
         <section>
             <article>
                 <strong>Coding Bootcamp</strong>
-                <p className="float-right">2020 – 2021</p>
+                <p className="float-right">2021</p>
                 <p>University of Toronto School of Continuing Studies, Toronto, ON.
                 <br/>A focused 24-week program focused on gaining relevant technical programming skills.</p>
             </article>
@@ -94,7 +94,7 @@ const Resume = ({ isMain }) => {
 
             <article>
                 <strong>Bachelor of Mathematics</strong>
-                <p className="float-right">	2015 – 2020</p>
+                <p className="float-right">	2020</p>
                 <p>University of Waterloo, Waterloo, ON.</p>
             </article>
 
