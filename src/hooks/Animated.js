@@ -34,7 +34,6 @@ const Animated = (props) => {
         console.log(animated)
     }, [props.motion])
 
-    console.log("here")
     return (
         <div className="animated">
             <>{animated}</>

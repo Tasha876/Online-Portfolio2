@@ -9,6 +9,32 @@
     to {top: 100vh;}
 }
 
+@keyframes slide-in-left {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(100%);
+        transform-origin: 100%;
+    }
+}
+
+@keyframes slide-out-left {
+    from {
+        opacity: 0;
+        transform: translateX(-200%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-100%);
+        transform-origin: 0;
+
+    }
+}
+
+
 @keyframes slide-in-right {
     from {
         opacity: 0;
@@ -408,19 +434,19 @@ div.animated .project {
 }
 
 .slide-out-left {
-    animation: slide-in-right 1s ease-in 0s 1 reverse forwards;
+    animation: slide-in-left 1s ease-in 0s 1 normal forwards;
 }
 
 .slide-out-right {
-    animation: slide-out-right 1s ease-in 0s 1 normal;
+    animation: slide-out-right 1s ease-in 0s 1 normal forwards;
 }
 
 .slide-in-left {
-    animation: slide-out-right 1s ease-in 0s 1 reverse forwards;
+    animation: slide-out-left 1s ease-in 0s 1 normal forwards;
 }
 
 .slide-in-right {
-    animation: slide-in-right 1s ease-in 0s 1 normal;
+    animation: slide-in-right 1s ease-in 0s 1 normal forwards;
 }
 
 .test {

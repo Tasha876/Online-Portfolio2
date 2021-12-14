@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="./../../node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./../components/style.css"/>
+    <link rel="stylesheet" href="./style.css"/>
+    <title>Cover Letter</title>
+    <style>
+        .signature {
+            font: 2rem cursive;
+        }
+        em {
+            font-style: normal;
+            background-color: lightgoldenrodyellow;
+        }
+        @media print {
+            pre {
+                page-break-inside: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="resume_page">
+    <main class="container h-100" style='font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;'>
+    <header>
+        <h1 class="display-3 text-center">Natasha Fray</h1>
+        <p class="text-center">130 Columbia St W, Unit 1511 Waterloo ON, N2L 0G6<br/>
+        519-502-2896 | natasha.fray9@gmail.com<br/>
+        <a href="https://www.linkedin.com/in/natasha-fray/" target="_blank" rel="noreferrer">LinkedIn</a> | <a href="https://github.com/Tasha876" target="_blank" rel="noreferrer">GitHub </a> | <a href="https://online-portfolio-tasha876.vercel.app/" target="_blank" rel="noreferrer">Portfolio</a></p>
+    </header>
+    
+    <article>
+        <p>Hello Designware team,</p>
+    
+        <p>I am a frontend web developer and recent Bachelor of Mathematics graduate from the University of Waterloo who has just completed the University of Toronto's Coding Bootcamp.</p>
+        <p>When I saw your frontend web developer position on LinkedIn it felt like the right next step in continuing my journey.</p>
+        <p>I consider myself to be immensely curious especially about all things design and technology related &mdash; I  have the meticulousness and attention to detail needed to complete my math degree and the flair for design to create my own portfolio.</p>
+        <p>I have always been interested in design and learning new technologies and my recent graduation from U of T's Coding Bootcamp, shows that whether it be Git, React, Node, or MySQL, I am capable of picking up languages and applications fast. My portfolio demonstrates my creative knack, and my attention to detail as well as my ability to deploy, maintain and constantly improve clean websites that are easy to navigate.</p>
+        <p>Looking at my experience, you will find that when collaborating with team members to come up with the best solutions to enhance customers’ experience, I go above and beyond. At Nordia, I created a JavaScript based call flow at the start of the pandemic to help my team determine the proper information to give the consumer when we were urgently needed to fulfil orders for a product that was new to us at the time.</p>
+        <p>It would be a privilege to mesh my unique skills with Designware's driven, curious, and design focused team and I look forward to hearing from you soon.</p>
+        <p>Best wishes,</p>
+        <p class="signature">Natasha Fray</p>
+    </article>
+        <p>P.S. Here's my corrected code:</p>
+        <span>HTML (pug)</span>
+        <pre>
+            button.btn
+              ../assets/happy.pug // indentation
+              span So Good!
+        </pre>
+        <span>CSS (Sass)</span>
+        <pre>
+            $colA: #A6A7A9
+            $colB: #FCFCFC
+            $colC: #3B3D42
+            
+            .btn
+              display: flex
+              flex-flow: row nowrap /* most of the time, you wouldn't want a button element to wrap */
+              align-items: center /* center not middle */
+              padding: 10px 15px 10px 10px /* padding was way off before */
+              background: #3D3F42
+              border: none
+              border-radius: 4px  
+              transition: 0.2s all
+              
+              svg
+                width: 18px
+                height: 18px
+                fill: $colA
+                stroke: $colA
+                stroke-width: 2px
+                margin-right: 10px /* makes the SVG not smoosh against span */
+                transition: 0.2s all
+            
+              span
+                font-family: "Inter" sans-serif
+                font-size: 12.35px
+                font-weight: 700
+                color: $colA
+                transition: 0.2s all
+            
+              &:hover, &:hover svg, &:hover span
+                background: #515357
+                /*** below technically only applies to the SVG, but you could
+                    leave the styles for the button and the span here ***/
+                fill: $colB 
+                stroke: $colB /* same as above */
+                color: $colB
+                transition: 0.2s all
+            
+              &:active, &:active svg, &:active span
+                background: #D1D1D2
+                fill: $colC /* again, only applies to SVG */
+                stroke: $colC /* same as above, again */
+                color: $colC     
+        </pre>
+    </main>
+    </div>
+</body>
+</html>
