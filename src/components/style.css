@@ -177,7 +177,7 @@ section {
     background-image: linear-gradient(lightBlue 0%, lightblue 30%, skyBlue 30%, skyBlue 75%, #42a7d6 75%, #42a7d6 100%);
 }
 
-#skills *, #resume * , #portfolio *, #about_me *, #toc * {
+#skills *, #resume * , #portfolio > *, #about_me *, #toc * {
     z-index: 2;
     will-change: opacity;
 }
